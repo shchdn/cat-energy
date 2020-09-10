@@ -1,0 +1,121 @@
+.stats-list{
+    @include reset-list;
+    display: flex;
+    &__item{
+        display: flex;
+        // flex-grow: 1;
+        justify-content: center;
+        position: relative;
+        border-radius: 3px;
+        border: 1px solid #cdcdcd;
+        padding: 20px;
+        padding-bottom: 25px;
+        &::after{
+            content: '';
+
+        }
+    }
+    &__item + &__item{
+        margin-left: 40px;
+    }
+    &__value{
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    &__description{
+        position: absolute;
+        padding: 0 10px;
+        bottom: -7px;
+        
+        font-family: $arial;
+        font-size: 14px;
+        background: $page-secondary-color;
+    }
+}
+.example{
+    margin-top: 25px;
+    & .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+        padding: 65px 0;
+
+        font-size: 60px;
+    }
+    &__wrapper{
+        background: $page-secondary-color;
+        padding-bottom: 75px;
+    }
+    &__description{
+        margin-top: 75px;
+        padding: 0;
+        max-width: 430px;
+        font-family: $arial;
+    }
+    &__list{
+        margin-top: 70px;
+    }
+    &__list .stats-list__item{
+        min-width: 125px;
+    }
+    &__costs{
+        padding: 0;
+        margin-top: 60px;
+        text-transform: uppercase;
+        font-size: 20px;
+
+        & span + span{
+            margin-left: 65px;
+        }
+    }
+    &__slider{
+        // background: gray;
+        // width: 300px;
+    }
+}
+.slider{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__photo{
+        margin-top: -180px;
+    }
+    &__scale, &__grip{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__scale{
+        flex-grow: 1;
+        height: 6px;
+        background: #dcdcdc;
+        border-radius: 3px;
+    }
+    &__grip{
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        border: 1px solid #cdcdcd;
+        background-color: #ffffff;
+        &::before{
+            content: '';
+            background: #68b738;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+    &__text{
+        text-transform: uppercase;
+        &:first-child{
+            margin-right: 25px;
+        }
+        &:last-child{
+            margin-left: 25px;
+        }
+    }
+}
