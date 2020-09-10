@@ -1,0 +1,75 @@
+.offers{
+    margin-top: 80px;
+    &__item{
+        position: relative;
+        padding: 40px 55px 60px 55px;
+        max-width: 570px;
+
+        background: $page-secondary-color;
+    }
+    &__item + &__item{
+        margin-left: 80px;
+    }
+    &__title{
+        text-transform: uppercase;
+        padding: 0;
+        font-weight: 400;
+        font-size: 36px;
+        margin-left: 65px;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+    }
+    &__icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: #68b738;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        &--slim::before{
+            content: url('../img/vector/cat-slim.svg');
+            filter: brightness(0);
+            bottom: 10px;
+        }
+        &--pro::before{
+            content: url('../img/vector/cat-pro.svg');
+        }
+        &::before{
+            position: absolute;
+        }
+    }
+    &__description{
+        padding: 0;
+        margin: 45px 0 35px 0;
+        font-family: $arial;
+        color: $text-tertiary-color;
+    }
+    &__link{
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: $text-primary-color;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    // arrow stylization
+    &__link::after{
+        content: '';
+        order: 2;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid $arrow-primary-color;
+    }
+    &__link::before{
+        content: '';
+        order: 1;
+        margin-left: 25px;
+        width: 17px;
+        height: 3px;
+        background: $arrow-primary-color;
+    }
+}

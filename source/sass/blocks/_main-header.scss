@@ -1,0 +1,81 @@
+.page-header {
+    position: relative;
+    padding-top: 55px;
+    min-height: calc(100vh - 55px);
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo-image{
+        width: 202px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: -5;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: calc(50% - 40px);
+
+        background: $promo-bg-color url('../img/raster/index-background-desktop.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: cover;
+    }
+}
+.main-nav {
+    &__list {
+        @include reset-list;
+        display: flex;
+        max-width: 480px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    &__item {
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+    &__item--active{
+        border-bottom: 2px solid $text-secondary-color;
+        pointer-events: none;
+    }
+    &__item a{
+        text-decoration: none;
+        color: $text-secondary-color;
+    }
+    &__item + &__item  {
+        margin-left: 35px;
+    }
+}
+.promo{
+    margin-top: 40px;
+
+    & .container{
+        display: flex;
+    }
+    &__wrapper{
+        margin-left: 45px;
+        width: 420px;
+    }
+    &__title{
+        margin: 0;
+        margin-top: 90px;
+
+        font-size:60px;
+        line-height: 60px;
+        font-weight: 400;
+    }
+    &__slogan{
+        margin: 0;
+        margin-top: 35px;
+        
+        font-size: 20px;
+        font-weight: 400;
+    }
+    &__button{
+        margin-top: 50px;
+    }
+}

@@ -1,11 +1,15 @@
+// Global
 @import './global/mixins';
 @import './global/colors';
 @import './global/normalize';
-@import './global/scaffolding';
 @import './global/fonts';
+@import './global/vars';
+@import './global/scaffolding';
+@import './global/common';
 @import './global/buttons';
 
-
 // Blocks
+@import './blocks/main-header';
+@import './blocks/offers';
 
 // TODO: 
