@@ -17,16 +17,16 @@
 
         //Icon
         &--leaf::before{
-            content: url('../img/vector/advantage-leaf.svg');
+            content: url('../img/raster/advantage-leaf.png');
         }
         &--powder::before{
-            content: url('../img/vector/advantage-powder.svg');
+            content: url('../img/raster/advantage-powder.png');
         }
         &--meal::before{
-            content: url('../img/vector/advantage-meal.svg');
+            content: url('../img/raster/advantage-meal.png');
         }
         &--clock::before{
-            content: url('../img/vector/advantage-clock.svg');
+            content: url('../img/raster/advantage-clock.png');
         }
         &::before{
             display: flex;

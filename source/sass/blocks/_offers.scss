@@ -33,9 +33,13 @@
             content: url('../img/vector/cat-slim.svg');
             filter: brightness(0);
             bottom: 10px;
+            width: 70px;
+            height: 97px;
         }
         &--pro::before{
             content: url('../img/vector/cat-pro.svg');
+            width: 134px;
+            height: 56px;
         }
         &::before{
             position: absolute;
@@ -54,21 +58,27 @@
         color: $text-primary-color;
         text-decoration: none;
         text-transform: uppercase;
-    }
-    // arrow stylization
-    &__link::after{
-        content: '';
-        order: 2;
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-left: 5px solid $arrow-primary-color;
-    }
-    &__link::before{
-        content: '';
-        order: 1;
-        margin-left: 25px;
-        width: 17px;
-        height: 3px;
-        background: $arrow-primary-color;
+        // arrow stylization
+        &::after{
+            content: '';
+            order: 2;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid $arrow-primary-color;
+        }
+        &::before{
+            content: '';
+            order: 1;
+            margin-left: 25px;
+            width: 17px;
+            height: 3px;
+            background: $arrow-primary-color;
+        }
+        &:hover::before{
+            width: 26px;
+        }
+        &:active, &:active::before, &:active::after{
+            opacity: 0.3;
+        }
     }
 }

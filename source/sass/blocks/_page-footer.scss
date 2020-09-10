@@ -9,18 +9,50 @@
         display: flex;
         align-items: center;
     }
+    &__logo{
+        &:hover{
+            opacity: 0.8;
+        }
+        &:active{
+            opacity: 0.6;
+        }
+
+    }
 }
 .social-list{
     @include reset-list;
     display: flex;
     align-items: center;
-    &__item{
-        & + &{
-            margin-left: 30px;
+    & li + li{
+        margin-left: 30px;
+    }
+    // &__item{
+    //     & + &{
+    //         margin-left: 30px;
+    //     }
+    // }
+    &__icon{
+        &:hover{
+            fill: $social-hover-color;
+        }
+        &:active{
+            opacity: 0.3;
         }
     }
 }
 .copyright{
+    &__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $text-primary-color;
+        &:hover{
+            fill: $social-hover-color;
+        }
+        &:active{
+            opacity: 0.3;
+        }
+    }
     &__logo{
         margin-left: 25px;
     }

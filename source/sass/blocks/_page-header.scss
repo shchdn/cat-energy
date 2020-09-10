@@ -37,17 +37,23 @@
         padding: 10px 0;
         text-transform: uppercase;
         font-size: 20px;
-    }
-    &__item--active{
-        border-bottom: 2px solid $text-secondary-color;
-        pointer-events: none;
-    }
-    &__item a{
-        text-decoration: none;
-        color: $text-secondary-color;
-    }
-    &__item + &__item  {
-        margin-left: 35px;
+        &--active{
+            border-bottom: 2px solid $text-secondary-color;
+            pointer-events: none;
+        }
+        &:hover{
+            opacity: 0.6;
+        }
+        &:active{
+            opacity: 0.3;
+        }
+        & a{
+            text-decoration: none;
+            color: $text-secondary-color;
+        }
+        & + &  {
+            margin-left: 35px;
+        }
     }
 }
 .promo{
