@@ -1,0 +1,30 @@
+.page-footer{
+    padding: 65px 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__copyright{
+        display: flex;
+        align-items: center;
+    }
+}
+.social-list{
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    &__item{
+        & + &{
+            margin-left: 30px;
+        }
+    }
+}
+.copyright{
+    &__logo{
+        margin-left: 25px;
+    }
+    &__title{
+        font-family: $arial;
+    }
+}
