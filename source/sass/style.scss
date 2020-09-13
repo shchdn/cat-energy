@@ -9,11 +9,17 @@
 @import './global/buttons';
 
 // Blocks
-@import './blocks/page-header';
-@import './blocks/offers';
-@import './blocks/advantages';
-@import './blocks/example';
-@import './blocks/map';
-@import './blocks/page-footer';
+    //Common
+    @import './blocks/common/page-header';
+    @import './blocks/common/map';
+    @import './blocks/common/page-footer';
+    // Index
+    @import './blocks/index/offers';
+    @import './blocks/index/advantages';
+    @import './blocks/index/example';
+    // Catalog
+    @import './blocks/catalog/catalog';
+    @import './blocks/catalog/extra-goods';
+//
 
 // TODO: 

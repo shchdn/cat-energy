@@ -1,16 +1,29 @@
-.button-main {
+.button-secondary, .button-main {
     display: block;
     padding: 15px 25px;
 
-    background-color: $button-main-color;
-    color: $text-secondary-color;
     border: none;
     text-transform: uppercase;
+}
+.button-main {
+    background-color: $button-main-color;
+    color: $text-secondary-color;
     &:hover{
         cursor: pointer;
         background-color: $button-main-hover-color;
     }
     &:active{
         color: rgba($color: $text-secondary-color, $alpha: 0.3)
+    }
+}
+.button-secondary{
+    background: $button-secondary-color;
+    color: $text-primary-color;
+    &:hover{
+        cursor: pointer;
+        background-color: $button-secondary-hover-color;
+    }
+    &:active{
+        color: rgba($color: $text-primary-color, $alpha: 0.3);
     }
 }

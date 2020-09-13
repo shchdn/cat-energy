@@ -1,0 +1,110 @@
+.catalog{
+    &-more{
+        text-align: center;
+        width: 167px;
+        padding: 40px 38px 40px 38px;
+        border: 1px solid $border-primary-color;
+        justify-content: center;
+        &__plus{
+            position: relative;
+            height: 60px;
+            width: 60px;
+            &::before{
+                content: '';
+                border-left: 2px solid $border-primary-color;
+                height: 60px;
+                right: 30px;
+                position: absolute;
+
+            }
+            &::after{
+                content: '';
+                border-bottom: 2px solid $border-primary-color;
+                position: absolute;
+                width: 60px;
+                bottom: 30px;
+                left: 0;
+            }
+        }
+        &__title{
+            max-width: 135px;
+            margin: 50px 0 30px 0;
+        }
+        &__description{
+            margin: 0;
+            font-family: $arial;
+        }
+        &__button{
+            margin-top: auto;
+            width: 100%;
+        }
+    }
+    &__title{
+        // padding-left: 40px;
+        font-size: 60px;
+        line-height: 60px;
+        margin: 85px 40px 15px 40px;
+    }
+    & .container{
+        width: 1300px;
+    }
+    &__list{
+        @include reset-list;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: center;
+
+    }
+}
+.product, .catalog-more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 140px;
+    margin-left: 40px;
+    margin-right: 40px;
+ 
+}
+
+.product{
+    background: $page-secondary-color;
+    width: 165px;
+    padding: 40px;  
+    &__photo-wrapper{
+        margin-top: -120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 208px;
+    }
+    &__title, &__weight{
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    &__title{
+        padding: 0;
+        margin: 0;
+    }
+    &__parameters{
+        margin-top: 30px;
+    }
+    &__button {
+        width: 100%;
+        margin-top: auto;
+    }
+}
+.parameters-list{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: $arial;
+    margin-bottom: 35px;
+    & tr{
+        border-bottom: 1px solid $border-primary-color;
+    }
+    & td{
+        padding: 7px 0;
+    }
+    & td:last-child{
+        text-align: right;
+    }
+}
