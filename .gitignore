@@ -8,3 +8,4 @@ npm-debug.*
 source/css/*.css
 build/
 Thumbs.db
+.publish/
