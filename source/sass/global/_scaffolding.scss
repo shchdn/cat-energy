@@ -1,0 +1,22 @@
+body, h1, h2, h3{
+    font-weight: 400;
+}
+body{
+    font-family: $oswald;
+    font-size: 16px;
+    color: $text-primary-color;
+    background: $page-main-color;
+}
+
+.container {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}

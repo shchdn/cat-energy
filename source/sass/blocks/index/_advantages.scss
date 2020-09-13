@@ -1,0 +1,57 @@
+.advantages{
+    margin-top: 80px;
+    
+    &__title{
+        font-size: 60px;
+    }
+    &__list{
+        @include reset-list;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        position: relative;
+        max-width: 205px;
+        min-height: 230px;
+        counter-increment: feature__number; 
+
+        //Icon
+        &--leaf::before{
+            content: url('../img/raster/advantage-leaf.png');
+        }
+        &--powder::before{
+            content: url('../img/raster/advantage-powder.png');
+        }
+        &--meal::before{
+            content: url('../img/raster/advantage-meal.png');
+        }
+        &--clock::before{
+            content: url('../img/raster/advantage-clock.png');
+        }
+        &::before{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            background: $advantages-icon-color;
+        }
+        //Number
+        &::after{
+            content: counter(feature__number);
+            position: absolute;
+            z-index: -5;
+            top: -60px;
+            right: -35px;
+            
+            font-size: 280px;
+            color: $advantages-number-color;
+        }
+    }
+    &__description{
+        padding: 0;
+        margin-top: 35px;
+        font-family: $arial;
+        color: $text-tertiary-color;
+    }
+}

@@ -1,0 +1,40 @@
+#map{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.map-info{
+    // position: absolute;
+    &__wrapper{
+        width: 420px;
+        background: white;
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        bottom: 0;
+        margin: 95px 0;
+        left: 110px;
+        padding: 70px 90px 70px 75px;
+        max-width: 570px;
+    }
+    &__content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title, &__address{
+        max-width: 155px;
+    }
+    &__title{
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+    &__address{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: $arial;
+    }
+}

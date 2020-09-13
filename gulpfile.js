@@ -33,7 +33,7 @@ var svgmin = require("gulp-svgmin");
 var changed = require("gulp-changed");
 var del = require("del");
 
-var ghpages = require("gh-pages");
+var ghpages = require("gulp-gh-pages");
 
 gulp.task("compress", function (cb) {
   pump([
@@ -243,6 +243,7 @@ gulp.task("build", gulp.series(
 		done();
 }));
 
-ghpages.publish("build", {
-  message: "UpDated at " + new Date()
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghpages());
 });

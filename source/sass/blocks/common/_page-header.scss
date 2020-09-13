@@ -1,0 +1,94 @@
+.page-header {
+    position: relative;
+    padding-top: 55px;
+    &--index{
+        min-height: calc(100vh - 55px);
+    }
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo-image{
+        width: 202px;
+    }
+    &--index::before{
+        content: '';
+        position: absolute;
+        z-index: -5;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: calc(50% - 40px);
+
+        background: $promo-bg-color url('../img/raster/index-background-desktop.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: cover;
+    }
+}
+.main-nav {
+    &__list {
+        @include reset-list;
+        display: flex;
+        max-width: 480px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    &__item {
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-size: 20px;
+        &--active{
+            border-bottom: 2px solid $nav-item-border-color;
+            pointer-events: none;
+            .page-header--index &{
+                border-bottom: 2px solid $text-secondary-color;
+            }
+        }
+
+        &:hover{
+            opacity: 0.6;
+        }
+        &:active{
+            opacity: 0.3;
+        }
+        & a{
+            text-decoration: none;
+            color: $text-primary-color;
+        }
+        .page-header--index & a{
+            color: $text-secondary-color;
+        }
+        & + &  {
+            margin-left: 35px;
+        }
+    }
+}
+.promo{
+    margin-top: 40px;
+
+    & .container{
+        display: flex;
+    }
+    &__wrapper{
+        margin-left: 45px;
+        width: 420px;
+    }
+    &__title{
+        margin: 0;
+        margin-top: 90px;
+
+        font-size:60px;
+        line-height: 60px;
+    }
+    &__slogan{
+        margin: 0;
+        margin-top: 35px;
+        
+        font-size: 20px;
+    }
+    &__button{
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,116 @@
+.stats-list{
+    @include reset-list;
+    display: flex;
+    &__item{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        border-radius: 3px;
+        border: 1px solid $border-primary-color;
+        padding: 20px;
+        padding-bottom: 25px;
+    }
+    &__item + &__item{
+        margin-left: 40px;
+    }
+    &__value{
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    &__description{
+        position: absolute;
+        padding: 0 10px;
+        bottom: -7px;
+        
+        font-family: $arial;
+        font-size: 14px;
+        background: $page-secondary-color;
+    }
+}
+.example{
+    margin-top: 25px;
+    & .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+        padding: 65px 0;
+
+        font-size: 60px;
+    }
+    &__wrapper{
+        background: $page-secondary-color;
+        padding-bottom: 75px;
+    }
+    &__description{
+        margin-top: 75px;
+        padding: 0;
+        max-width: 430px;
+        font-family: $arial;
+    }
+    &__list{
+        margin-top: 70px;
+    }
+    &__list .stats-list__item{
+        min-width: 125px;
+    }
+    &__costs{
+        padding: 0;
+        margin-top: 60px;
+        text-transform: uppercase;
+        font-size: 20px;
+
+        & span + span{
+            margin-left: 65px;
+        }
+    }
+}
+.slider{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__photo{
+        margin-top: -180px;
+    }
+    &__scale, &__grip{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__scale{
+        flex-grow: 1;
+        height: 6px;
+        background: $scale-background-color;
+        border-radius: 3px;
+    }
+    &__grip{
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        box-shadow: $grip-shadow;
+        border: 1px solid $border-primary-color;
+        background: $page-main-color;
+        &::before{
+            content: '';
+            background: $button-main-color;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: block;
+        }
+        &:hover{
+            cursor: pointer;
+            box-shadow: $grip-hover-shadow;
+        }
+    }
+    &__text{
+        text-transform: uppercase;
+        &:first-child{
+            margin-right: 25px;
+        }
+        &:last-child{
+            margin-left: 25px;
+        }
+    }
+}
