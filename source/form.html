@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cat-Energy - Подбор программы</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -27,6 +27,120 @@
             </nav>
         </div>
     </header>
+    <form action="" class="form-programm">
+        <section class="form-intro container">
+            <h2 class="form-intro__title">Подбор программы</h2>
+            <p class="form-intro__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </section>
+        <section class="cat-info container">
+            <div class="cat-info__wrapper">
+                <fieldset class="form-section form-section--cat-parameters">
+                    <label class="form-section__field">
+                        <span class="form-section__name">Имя:*</span>
+                        <input type="text" class="form-section__input" placeholder="Барсик" required>
+                    </label>
+                    <label class="form-section__field">
+                        <span class="form-section__name">Вес (кг):*</span>
+                        <input type="text" class="form-section__input" placeholder="7" required>
+                    </label>
+                    <label class="form-section__field">
+                        <span class="form-section__name">Возраст (лет):</span>
+                        <input type="text" class="form-section__input" placeholder="7">
+                    </label>
+                </fieldset>
+                <fieldset class="form-section form-section--cat-programm">
+                        <ul class="form-section__list">
+                            <li class="form-section__item">
+                                <label class="form-section__field form-section__radio">
+                                    <input type="radio" name="choose-programm">
+                                    <span class="form-section__name">Похудение</span>
+                                </label>
+                            </li>
+                            <li class="form-section__item">
+                                <label class="form-section__field form-section__radio">
+                                    <input type="radio" name="choose-programm">
+                                    <span class="form-section__name">Набор массы</span>
+                                </label>
+                            </li>
+                            <li class="form-section__item">
+                                <label class="form-section__field form-section__radio">
+                                    <input type="radio" name="choose-programm">
+                                    <span class="form-section__name">Не знаю (Нужен ваш совет)</span>
+                                </label>
+                            </li>
+                        </ul>
+                </fieldset>
+            </div>
+        </section>
+        <section class="form-contacts">
+            <div class="container">
+                <h2 class="form-contacts__title title-line">Контактные данные (владельца кота)</h2>
+                <fieldset class="form-section">
+                    <div class="form-contacts__wrapper">
+                        <label class="form-section__field form-section__field--email">
+                            <span class="form-section__name">E-mail:*</span>
+                            <input type="email" class="form-section__input" placeholder="kuklachev@gmail.com" required>
+                            <svg class="form-section__icon" width="17px" height="13px">
+                                <use xlink:href="img/vector/sprite.svg#mail"></use>
+                            </svg>
+                        </label>
+                        <label class="form-section__field form-section__field--phone">
+                            <span class="form-section__name">Телефон:*</span>
+                            <input type="tel" class="form-section__input" placeholder="8 (960) 900-60-90" required>
+                            <svg class="form-section__icon" width="20px" height="20px">
+                                <use xlink:href="img/vector/sprite.svg#phone"></use>
+                            </svg>
+                        </label>    
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+        <section class="form-comment">
+            <div class="container">
+                <h2 class="form-comment__title title-line">Комментарий</h2>
+                <div class="form-comment__wrapper">
+                    <textarea name="comment" id="comment" cols="30" rows="10" maxlength="450" placeholder="Расскажите обо всех повадках кота" class="form-section__textarea form-comment__textarea"></textarea>
+                </div>
+            </div>
+        </section>
+        <section class="form-extra">
+            <div class="container">
+                <h2 class="form-extra__title title-line">Дополнительно</h2>
+                <ul class="form-extra__list">
+                    <li>
+                        <label class="form-section__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <span class="form-section__name">Сахарозаменитель</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="form-section__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <span class="form-section__name">Питьевая вода</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="form-section__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <span class="form-section__name">Молоко</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="form-section__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <span class="form-section__name">Витамины</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="form-submit">
+            <div class="form-submit__wrapper container">
+                <button type="submit" class="form-submit__button button-main">Отправить заявку</button>
+                <span class="form-submit__description">* — Обязательные поля</span>
+            </div>
+        </section>
+    </form>
     <section id="map">
         <div class="map-info__wrapper">
             <div class="map-info__content">
@@ -38,7 +152,6 @@
             </div>
         </div>
     </section>
-
     <footer class="page-footer">
         <div class="page-footer__wrapper container">
             <a href="" class="page-footer__logo-link">

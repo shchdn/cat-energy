@@ -1,0 +1,11 @@
+.form-contacts{
+
+    &__title{
+        font-size: 36px;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin: 70px 0 ;
+    }
+}

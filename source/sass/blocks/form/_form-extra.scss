@@ -1,0 +1,13 @@
+.form-extra{
+    margin-bottom: 60px;    
+    &__title{
+        font-size: 36px;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+
+        @include reset-list;
+        margin-top: 55px;
+    }
+}
