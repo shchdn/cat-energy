@@ -1,0 +1,15 @@
+.form-submit{
+    margin-bottom: 80px;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__button{
+        width: 570px;
+    }       
+    &__description{
+        margin-left: 80px;
+        font-family: $arial;    
+        color: $text-tertiary-color;
+    }
+}

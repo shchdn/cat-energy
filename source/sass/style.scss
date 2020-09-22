@@ -1,18 +1,19 @@
 // Global
 @import './global/mixins';
-@import './global/colors';
 @import './global/normalize';
 @import './global/fonts';
+@import './global/colors';
 @import './global/vars';
 @import './global/scaffolding';
 @import './global/common';
 @import './global/buttons';
 
 // Blocks
-    //Common
+    // Common
     @import './blocks/common/page-header';
     @import './blocks/common/map';
     @import './blocks/common/page-footer';
+    @import './blocks/common/form-section';
     // Index
     @import './blocks/index/offers';
     @import './blocks/index/advantages';
@@ -20,6 +21,17 @@
     // Catalog
     @import './blocks/catalog/catalog';
     @import './blocks/catalog/extra-goods';
+    // Form
+    @import './blocks/form/form-intro';
+    @import './blocks/form/cat-info';
+    @import './blocks/form/form-contacts';
+    @import './blocks/form/form-comment';
+    @import './blocks/form/form-extra';
+    @import './blocks/form/form-submit';
 //
 
 // TODO: 
+// Разобраться с высотой и центровкой бэкграунда хедера в индексе
+// исправить везде в секциях марджины на паддинги
+// вытащить общие стили из индексблоков и добавить в коммон
+// input email tel

@@ -1,0 +1,16 @@
+.form-comment{
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-size: 36px;
+    }
+    &__textarea{
+        height:175px;
+        flex: 1;
+        margin: 70px 0;
+    }
+}
