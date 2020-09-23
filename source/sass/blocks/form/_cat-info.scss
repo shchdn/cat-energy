@@ -3,6 +3,9 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        @include tablet{
+            flex-direction: column;
+        }
     }
 
 }

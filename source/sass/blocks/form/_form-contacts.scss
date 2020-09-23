@@ -7,5 +7,13 @@
         display: flex;
         justify-content: space-between;
         margin: 70px 0 ;
+        @include tablet{
+            flex-direction: column;
+        }
+        & .form-section__field + .form-section__field{
+            @include tablet{
+                margin-top: 20px;
+            }
+        }
     }
 }

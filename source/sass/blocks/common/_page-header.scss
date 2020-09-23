@@ -26,7 +26,7 @@
         right: 0; 
         width: calc(50% - 40px);
 
-        background: $promo-bg-color url('../img/raster/index-background-desktop.png');
+        background: $promo-bg-color url('../img/raster/index-background-desktop.jpg');
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: cover;
@@ -97,6 +97,9 @@
     &__wrapper{
         margin-left: 85px;
         width: 420px;
+        @include tablet{
+            margin-left: 70px;
+        }
     }
     &__image{
         width: 552px;

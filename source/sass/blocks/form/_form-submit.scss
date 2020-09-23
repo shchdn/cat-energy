@@ -6,6 +6,9 @@
     }
     &__button{
         width: 570px;
+        @include tablet{
+            width: 285px;
+        }
     }       
     &__description{
         margin-left: 80px;

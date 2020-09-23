@@ -11,6 +11,12 @@
     position: relative;
 
 }
+#catalog .map-info__wrapper, #catalog .map-main,
+#form .map-info__wrapper, #form .map-main{
+    @include tablet{
+        background: $page-secondary-color;
+    }
+}
 .map-info{
     &__wrapper{
         width: 420px;
@@ -26,6 +32,7 @@
         @include tablet{
             position: relative;
             width: 708px;
+            padding: 70px 30px;
             margin: 0 auto;
             left: 0;
             max-width: none;

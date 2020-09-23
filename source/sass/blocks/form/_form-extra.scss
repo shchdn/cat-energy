@@ -9,5 +9,19 @@
 
         @include reset-list;
         margin-top: 55px;
+        @include tablet{
+            flex-wrap: wrap;
+            width: 530px;
+        }
+        & li {
+            @include tablet{
+                min-width: 215px;
+            }
+        }
+        & li:not(:nth-child(1)):not(:nth-child(2)){
+            @include tablet{
+                margin-top: 30px;
+            }
+        }
     }
 }

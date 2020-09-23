@@ -15,7 +15,6 @@ body{
     @include tablet {
         width: 708px;
         padding: 0 30px;
-        // background: black;
     }
     @include mobile {
         width: 280px;

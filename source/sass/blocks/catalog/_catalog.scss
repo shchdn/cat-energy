@@ -40,20 +40,24 @@
         }
     }
     &__title{
-        // padding-left: 40px;
         font-size: 60px;
         line-height: 60px;
         margin: 85px 40px 15px 40px;
+        @include tablet{
+            margin-left: 30px;
+        }
     }
     & .container{
         width: 1300px;
+        @include tablet {
+            width: 768px;
+            padding: 0 30px;
+        }    
     }
     &__list{
         @include reset-list;
         display: flex;
         flex-wrap: wrap;
-        // justify-content: center;
-
     }
 }
 .product, .catalog-more{
@@ -63,7 +67,11 @@
     margin-top: 140px;
     margin-left: 40px;
     margin-right: 40px;
- 
+    @include tablet{
+        margin-left: 30px;
+        margin-right: 30px;
+        flex-grow: 1;
+    }
 }
 
 .product{
