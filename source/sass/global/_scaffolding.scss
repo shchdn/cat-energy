@@ -10,7 +10,17 @@ body{
 
 .container {
     width: 1220px;
+    padding: 0 40px;
     margin: 0 auto;
+    @include tablet {
+        width: 708px;
+        padding: 0 30px;
+        // background: black;
+    }
+    @include mobile {
+        width: 280px;
+        padding: 0 20px;
+    }
 }
 
 .visually-hidden {

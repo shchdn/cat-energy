@@ -2,7 +2,7 @@
     position: relative;
     padding-top: 55px;
     &--index{
-        min-height: calc(100vh - 55px);
+        min-height: 696px;
     }
     &__wrapper{
         display: flex;
@@ -11,6 +11,11 @@
     }
     &__logo-image{
         width: 202px;
+        height: 59px;
+        @include tablet{
+            width: 173px;
+            height: 58px
+        }
     }
     &--index::before{
         content: '';
@@ -18,13 +23,16 @@
         z-index: -5;
         top: 0;
         bottom: 0;
-        right: 0;
+        right: 0; 
         width: calc(50% - 40px);
 
         background: $promo-bg-color url('../img/raster/index-background-desktop.png');
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: cover;
+        @include tablet{
+            content: none;
+          }
     }
 }
 .main-nav {
@@ -39,11 +47,17 @@
         padding: 10px 0;
         text-transform: uppercase;
         font-size: 20px;
+        @include tablet{
+            font-size: 18px;
+        }
         &--active{
             border-bottom: 2px solid $nav-item-border-color;
             pointer-events: none;
             .page-header--index &{
                 border-bottom: 2px solid $text-secondary-color;
+                @include tablet {
+                    border-bottom: 2px solid $nav-item-border-color;
+                }
             }
         }
 
@@ -59,6 +73,9 @@
         }
         .page-header--index & a{
             color: $text-secondary-color;
+            @include tablet{
+                color: $text-primary-color;
+            }
         }
         & + &  {
             margin-left: 35px;
@@ -67,13 +84,30 @@
 }
 .promo{
     margin-top: 40px;
-
+    position: relative;
+    @include tablet{
+        min-height: 805px;
+    }
     & .container{
         display: flex;
+        @include tablet{
+            display: block;
+        }
     }
     &__wrapper{
-        margin-left: 45px;
+        margin-left: 85px;
         width: 420px;
+    }
+    &__image{
+        width: 552px;
+        height: 499px;
+        @include tablet{
+            width: 709px;
+            height: 609px;
+            position: absolute;
+            z-index: -5;
+            top: 190px;
+        }
     }
     &__title{
         margin: 0;
@@ -87,6 +121,9 @@
         margin-top: 35px;
         
         font-size: 20px;
+        @include tablet{
+            text-transform: uppercase;
+        }
     }
     &__button{
         margin-top: 50px;

@@ -32,6 +32,9 @@
     & .container{
         display: flex;
         justify-content: space-between;
+        @include tablet{
+            flex-direction: column;
+        }
     }
     &__title{
         padding: 65px 0;

@@ -3,3 +3,20 @@
     padding: 0;
     list-style: none;
   }
+// @mixin tablet {
+//   @media (max-width: $tablet-width) {
+//     @content;
+//   }
+// }
+
+@mixin mobile {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $desktop-width) {
+    @content;
+  }
+}

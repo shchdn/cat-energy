@@ -1,15 +1,26 @@
 .offers{
+    & .index-columns{
+        @include tablet{
+            flex-direction: column;
+        }
+    }
     margin-top: 80px;
     &__item{
         position: relative;
         padding: 40px 55px 60px 55px;
-        max-width: 570px;
+        max-width: 460px;
 
         background: $page-secondary-color;
+        @include tablet{
+            max-width: none;
+        }
+        & + & {
+            @include tablet{
+                margin-top: 30px;
+            }
+        }
     }
-    &__item + &__item{
-        margin-left: 80px;
-    }
+    
     &__title{
         text-transform: uppercase;
         padding: 0;

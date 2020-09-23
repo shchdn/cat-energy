@@ -8,13 +8,24 @@
         @include reset-list;
         display: flex;
         justify-content: space-between;
+        @include tablet{
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
     }
     &__item{
         position: relative;
         max-width: 205px;
         min-height: 230px;
         counter-increment: feature__number; 
-
+        @include tablet{
+            &:nth-child(2n){
+                margin-left: 190px;
+            }
+            &:not(:nth-child(1)):not(:nth-child(2)){
+                margin-top: 90px;
+            }
+        }
         //Icon
         &--leaf::before{
             content: url('../img/raster/advantage-leaf.png');
