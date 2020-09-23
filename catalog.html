@@ -6,7 +6,7 @@
     <title>Cat-Energy - Каталог</title>
     <link href="css/style.min.css" rel="stylesheet">
 </head>
-<body>
+<body id="catalog">
     <header class="page-header">
         <div class="container page-header__wrapper">
             <img alt="" class="page-header__logo-image" src="img/vector/logo-desktop.svg" width="202px">
@@ -212,35 +212,43 @@
             <div class="extra-goods__wrapper">
                 <ul class="extra-goods__list goods-list">
                     <li class="goods-list__item">
-                        <h3 class="goods-list__title">Сахарозаменитель</h3>
-                        <p class="goods-list__description">
-                            <span class="goods-list__value">1 упаковка (100 г)</span>
-                            <span class="goods-list__price">200 Р.</span>
-                        </p>
+                        <div class="goods-list__inner">
+                            <h3 class="goods-list__title">Сахарозаменитель</h3>
+                            <p class="goods-list__description">
+                                <span class="goods-list__value">1 упаковка (100 г)</span>
+                                <span class="goods-list__price">200 Р.</span>
+                            </p>    
+                        </div>
                         <button class="button-main goods-list__button">Заказать</button>
                     </li>
                     <li class="goods-list__item">
-                        <h3 class="goods-list__title">Питьевая вода</h3>
-                        <p class="goods-list__description">
-                            <span class="goods-list__value">5 литров</span>
-                            <span class="goods-list__price">50 Р.</span>
-                        </p>
+                        <div class="goods-list__inner">
+                            <h3 class="goods-list__title">Питьевая вода</h3>
+                            <p class="goods-list__description">
+                                <span class="goods-list__value">5 литров</span>
+                                <span class="goods-list__price">50 Р.</span>
+                            </p>    
+                        </div>
                         <button class="button-main goods-list__button">Заказать</button>
                     </li>
                     <li class="goods-list__item">
-                        <h3 class="goods-list__title">Молоко</h3>
-                        <p class="goods-list__description">
-                            <span class="goods-list__value">1 литр</span>
-                            <span class="goods-list__price">100 Р.</span>
-                        </p>
+                        <div class="goods-list__inner">
+                            <h3 class="goods-list__title">Молоко</h3>
+                            <p class="goods-list__description">
+                                <span class="goods-list__value">1 литр</span>
+                                <span class="goods-list__price">100 Р.</span>
+                            </p>    
+                        </div>
                         <button class="button-main goods-list__button">Заказать</button>
                     </li>
                     <li class="goods-list__item">
-                        <h3 class="goods-list__title">Витамины</h3>
-                        <p class="goods-list__description">
-                            <span class="goods-list__value">1 упаковка (30 г)</span>
-                            <span class="goods-list__price">300 Р.</span>
-                        </p>
+                        <div class="goods-list__inner">
+                            <h3 class="goods-list__title">Витамины</h3>
+                            <p class="goods-list__description">
+                                <span class="goods-list__value">1 упаковка (30 г)</span>
+                                <span class="goods-list__price">300 Р.</span>
+                            </p>    
+                        </div>
                         <button class="button-main goods-list__button">Заказать</button>
                     </li>
                 </ul>
@@ -253,7 +261,7 @@
             </div>
         </div>
     </section>
-    <section id="map">
+    <section class="map-main">
         <div class="map-info__wrapper">
             <div class="map-info__content">
                 <h2 class="map-info__title">Приглашаем к сотрудничеству дилеров!</h2>
@@ -263,6 +271,7 @@
                 </p>    
             </div>
         </div>
+        <div id="map"></div>
     </section>
     <footer class="page-footer">
         <div class="container page-footer__wrapper">
