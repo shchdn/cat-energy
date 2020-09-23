@@ -26,6 +26,9 @@
         padding: 0;
         font-size: 36px;
         margin-left: 65px;
+        @include tablet{
+            margin: 0;
+        }
     }
     &__inner{
         display: flex;
@@ -40,17 +43,33 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
+        @include tablet{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
         &--slim::before{
             content: url('../img/vector/cat-slim.svg');
             filter: brightness(0);
             bottom: 10px;
             width: 70px;
             height: 97px;
+            @include tablet{
+                width: 140px;
+                height: 194px;
+            }
         }
         &--pro::before{
             content: url('../img/vector/cat-pro.svg');
             width: 134px;
             height: 56px;
+            @include tablet{
+                width: 268px;
+                height: 112px;
+            }
         }
         &::before{
             position: absolute;
@@ -61,6 +80,9 @@
         margin: 45px 0 35px 0;
         font-family: $arial;
         color: $text-tertiary-color;
+        @include tablet{
+            max-width: 345px;
+        }
     }
     &__link{
         position: relative;

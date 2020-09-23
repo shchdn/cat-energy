@@ -1,5 +1,9 @@
 .page-footer{
     padding: 65px 0;
+    background: $page-main-color;
+    @include tablet{
+        background: $page-secondary-color;
+    }
     &__wrapper{
         display: flex;
         justify-content: space-between;
@@ -32,6 +36,7 @@
     //     }
     // }
     &__icon{
+        fill: $footer-icon-color;
         &:hover{
             fill: $social-hover-color;
         }
@@ -42,6 +47,7 @@
 }
 .copyright{
     &__link{
+        fill: $footer-icon-color;
         display: flex;
         align-items: center;
         text-decoration: none;
@@ -57,6 +63,7 @@
         margin-left: 25px;
     }
     &__title{
+        color: $footer-icon-color;
         font-family: $arial;
     }
 }

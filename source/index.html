@@ -87,35 +87,39 @@
                 <div class="container">
                     <div class="example__inner">
                         <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-                        <ul class="example__list stats-list">
-                            <li class="stats-list__item">
-                                <span class="stats-list__value">5 кг</span>
-                                <span class="stats-list__description">снижение веса</span>
-                            </li>
-                            <li class="stats-list__item">
-                                <span class="stats-list__value">60 дней</span>
-                                <span class="stats-list__description">затрачено времени</span>
-                            </li>
-                        </ul>
-                        <p class="example__costs">
-                            <span>Затраты на питание:</span>
-                            <span>15 000 руб.</span>
-                        </p>
+                        <div class="example__stats-wrapper">
+                            <ul class="example__list stats-list">
+                                <li class="stats-list__item">
+                                    <span class="stats-list__value">5 кг</span>
+                                    <span class="stats-list__description">снижение веса</span>
+                                </li>
+                                <li class="stats-list__item">
+                                    <span class="stats-list__value">60 дней</span>
+                                    <span class="stats-list__description">затрачено времени</span>
+                                </li>
+                            </ul>
+                            <p class="example__costs">
+                                <span>Затраты на питание:</span>
+                                <span>15 000 руб.</span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="example__slider">
-                        <img class="slider__photo" src="img/raster/before-desktop.png" alt="">
+                    <div class="slider">
                         <div class="slider__wrapper">
-                            <span class="slider__text">Было</span>
-                            <div class="slider__scale">
-                                <div class="slider__grip"></div>
+                            <img class="slider__photo" src="img/raster/before-desktop.png" alt="">
+                            <div class="slider__inner">
+                                <span class="slider__text">Было</span>
+                                <div class="slider__scale">
+                                    <div class="slider__grip"></div>
+                                </div>
+                                <span class="slider__text">Стало</span>
                             </div>
-                            <span class="slider__text">Стало</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="map">
+        <section class="map-main">
             <div class="map-info__wrapper">
                 <div class="map-info__content">
                     <h2 class="map-info__title">Приглашаем к сотрудничеству дилеров!</h2>
@@ -125,6 +129,7 @@
                     </p>    
                 </div>
             </div>
+            <div id="map"></div>
         </section>
         <footer class="page-footer">
             <div class="page-footer__wrapper container">

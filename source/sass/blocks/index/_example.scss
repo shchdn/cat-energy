@@ -25,10 +25,16 @@
         font-family: $arial;
         font-size: 14px;
         background: $page-secondary-color;
+        @include tablet{
+            background: $page-main-color;
+        }
     }
 }
 .example{
     margin-top: 25px;
+    @include tablet{
+        margin: 0;
+    }
     & .container{
         display: flex;
         justify-content: space-between;
@@ -40,19 +46,52 @@
         padding: 65px 0;
 
         font-size: 60px;
+        @include tablet{
+            margin: 0;
+            padding: 0;
+            margin-top: 50px;
+        }
     }
     &__wrapper{
         background: $page-secondary-color;
         padding-bottom: 75px;
+        @include tablet{
+            padding: 0;
+            background: $page-main-color;
+        }
+        & .container{
+            @include tablet{
+                padding: 0;
+                width: auto;    
+            }
+        }
+    }
+    &__inner{
+        @include tablet{
+            padding: 0 30px;
+            width: 708px;
+            margin: 0 auto;
+        }
+    }
+    &__stats-wrapper{
+        margin-top: 70px;
+        @include tablet{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
     }
     &__description{
         margin-top: 75px;
         padding: 0;
         max-width: 430px;
         font-family: $arial;
+        @include tablet{
+            max-width: none;
+        }
     }
     &__list{
-        margin-top: 70px;
     }
     &__list .stats-list__item{
         min-width: 125px;
@@ -62,14 +101,35 @@
         margin-top: 60px;
         text-transform: uppercase;
         font-size: 20px;
-
+        @include tablet{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
         & span + span{
             margin-left: 65px;
+            @include tablet{
+                margin-left: auto;
+            }
         }
     }
 }
 .slider{
+    @include tablet{
+        background: $page-secondary-color;
+        margin-top: 240px;
+        // margin: 0 auto;
+        // width: 708px;
+        
+    }
     &__wrapper{
+        @include tablet{
+            margin: 0 auto;
+            width: 708px;
+            padding: 0 30px 75px;
+        }
+    }
+    &__inner{
         display: flex;
         align-items: center;
     }
@@ -109,6 +169,8 @@
     }
     &__text{
         text-transform: uppercase;
+        border-bottom: 1px dotted rgba($color: $text-primary-color, $alpha: 0.25);
+        padding-bottom: 5px;
         &:first-child{
             margin-right: 25px;
         }
