@@ -33,7 +33,9 @@ var svgmin = require("gulp-svgmin");
 var changed = require("gulp-changed");
 var del = require("del");
 
-var ghpages = require("gulp-gh-pages");
+//var ghpages = require("gulp-gh-pages");
+var ghpages = require('gh-pages');
+
 
 gulp.task("compress", function (cb) {
   pump([
@@ -243,7 +245,11 @@ gulp.task("build", gulp.series(
 		done();
 }));
 
+//gulp.task('deploy', function() {
+//  return gulp.src('./build/**/*')
+//    .pipe(ghpages());
+//});
+
 gulp.task('deploy', function() {
-  return gulp.src('./build/**/*')
-    .pipe(ghpages());
+	return ghpages.publish('build', function(err) {});
 });
