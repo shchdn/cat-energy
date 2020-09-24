@@ -5,7 +5,7 @@ var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var sourcemaps = require("gulp-sourcemaps");
+// var sourcemaps = require("gulp-sourcemaps");
 
 var csscomb = require("gulp-csscomb");
 var csslint = require("gulp-csslint");
@@ -40,10 +40,10 @@ var ghpages = require('gh-pages');
 gulp.task("compress", function (cb) {
   pump([
     gulp.src("source/js/**/*.js"),
-    sourcemaps.init(),
+    // sourcemaps.init(),
     uglify(),
     rename({suffix: ".min"}),
-    sourcemaps.write(),
+    // sourcemaps.write(),
     gulp.dest("build/js")
     ], cb);
 });
@@ -51,10 +51,10 @@ gulp.task("compress", function (cb) {
 gulp.task("concat", gulp.series("compress", function (cb) {
   pump([
     gulp.src(["source/js/*.js"]),
-    sourcemaps.init(),
+    // sourcemaps.init(),
     uglify(),
     concat("main.min.js"),
-    sourcemaps.write(),
+    // sourcemaps.write(),
     gulp.dest("build/js")
   ], cb);
 }));
@@ -62,17 +62,17 @@ gulp.task("concat", gulp.series("compress", function (cb) {
 gulp.task("style", function() {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(sourcemaps.write({includeContent: false}))
-    .pipe(sourcemaps.init({loadMaps: true}))
+    // .pipe(sourcemaps.write({includeContent: false}))
+    // .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(postcss([
       autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
@@ -106,7 +106,7 @@ gulp.task("watch", function () {
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(plumber())
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(posthtml([
       include()
     ]))
@@ -118,7 +118,7 @@ gulp.task("html", function () {
       sortAttributes: true,
       sortClassName: true
     }))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest("build"));
 });
 
