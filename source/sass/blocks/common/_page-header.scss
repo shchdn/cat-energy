@@ -1,6 +1,15 @@
 .page-header {
     position: relative;
     padding-top: 55px;
+    @include mobile{
+        padding-top: 0;
+    }
+    & .container{
+        @include mobile{
+            padding: 0;
+            // width: auto;
+        }
+    }
     &--index{
         min-height: 696px;
     }
@@ -8,6 +17,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+        }    
     }
     &__logo-image{
         width: 202px;
@@ -23,8 +35,8 @@
         z-index: -5;
         top: 0;
         bottom: 0;
-        right: 0; 
-        width: calc(50% - 40px);
+        right: 0px; 
+        width: 50%;
 
         background: $promo-bg-color url('../img/raster/index-background-desktop.jpg');
         background-repeat: no-repeat;
@@ -33,15 +45,32 @@
         @include tablet{
             content: none;
           }
+        // @include mobile{
+        //     content: "";
+        //     right: 50%;
+        //     transform: translate(50%, 100%);
+        //     bottom: none;
+        //     height: 305px;
+        // }
     }
 }
 .main-nav {
+    position: relative;
+    @include mobile{
+        width: 100%;
+    }
     &__list {
         @include reset-list;
         display: flex;
         max-width: 480px;
         flex-wrap: wrap;
         justify-content: flex-start;
+        @include mobile{
+            flex-direction: column;
+            text-align: center;
+            font-weight: 500;
+            max-width: none;
+        }
     }
     &__item {
         padding: 10px 0;
@@ -50,14 +79,24 @@
         @include tablet{
             font-size: 18px;
         }
+        @include mobile{
+            border-top: 1px dashed $mobile-border-color;
+            padding: 25px 0;
+        }
         &--active{
             border-bottom: 2px solid $nav-item-border-color;
             pointer-events: none;
+            @include mobile{
+                border-bottom: none;
+            }
             .page-header--index &{
                 border-bottom: 2px solid $text-secondary-color;
                 @include tablet {
                     border-bottom: 2px solid $nav-item-border-color;
                 }
+                @include mobile{
+                    border-bottom: none;
+                }    
             }
         }
 
@@ -79,6 +118,9 @@
         }
         & + &  {
             margin-left: 35px;
+            @include mobile{
+                margin-left: 0;
+            }
         }
     }
 }
@@ -88,28 +130,76 @@
     @include tablet{
         min-height: 805px;
     }
+    @include mobile{
+        margin-top: 0;
+        padding-top: 30px;
+    }
+    &::after{
+        @include mobile{
+            content: "";
+            background: $promo-bg-mobile-color url('../img/raster/index-background-mobile.jpg') no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 305px;
+            position: absolute;
+            top: 0;
+            // bottom: -305px;
+            // transform: translate(-25%, 100%);
+            width: calc(100%);
+            z-index: -10;
+
+        }
+    }
     & .container{
         display: flex;
         @include tablet{
             display: block;
         }
+        @include mobile{
+            padding: 0 20px;
+        }
     }
     &__wrapper{
+        position: relative;
         margin-left: 85px;
         width: 420px;
         @include tablet{
             margin-left: 70px;
         }
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0;
+            width: auto;
+            text-align: center;
+            color: $text-secondary-color;
+
+        }
     }
     &__image{
+        position: absolute;
+        right: 55px;
+        // bottom: 0;
+        top: 0;
+        transform: translate(100%);
         width: 552px;
         height: 499px;
         @include tablet{
+            transform: translate(0);
+            right: none;
+            left: -100px;
             width: 709px;
             height: 609px;
             position: absolute;
             z-index: -5;
             top: 190px;
+        }
+        @include mobile{
+            margin-top: 30px;
+            position: static;
+            width: 280px;
+            height: 270px;
         }
     }
     &__title{
@@ -118,6 +208,12 @@
 
         font-size:60px;
         line-height: 60px;
+        @include mobile{
+            font-size: 36px;
+            line-height: 36px;
+            margin-top: 0;
+            max-width: 250px;
+        }
     }
     &__slogan{
         margin: 0;
@@ -127,8 +223,16 @@
         @include tablet{
             text-transform: uppercase;
         }
+        @include mobile{
+            font-size: 14px;
+            margin-top: 20px;
+        }
     }
     &__button{
         margin-top: 50px;
+        @include mobile{
+            width: 100%;
+            order: 5;
+        }
     }
 }
