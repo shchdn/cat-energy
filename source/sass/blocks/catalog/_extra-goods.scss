@@ -3,6 +3,9 @@
     &__title{
         font-size: 36px;
         margin: 0;
+        @include mobile{
+            margin-left: -20px;
+        }
     }
     &__wrapper{
         position: relative;
@@ -14,8 +17,7 @@
         }
     }
     &__gift{
-        background: url('../img/raster/catalog/gift-photo-desktop.jpg.png');
-        background-repeat: no-repeat;
+        background: url('../img/raster/catalog/gift-photo-desktop.jpg') no-repeat;
         background-size: cover;
         position: absolute;
         top: 0;
@@ -27,16 +29,22 @@
         justify-content: center;
         align-items: center;
         @include tablet{
-            background: url('../img/raster/catalog/gift-photo-tablet.jpg');
-            margin-top: 70px;
+            background: url('../img/raster/catalog/gift-photo-tablet.jpg') no-repeat;
+                margin-top: 70px;
             position: static;
             width: calc(100% - 180px);
-            background-size: center;
-            // background-position-y: 60%;
+            background-size: cover;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             padding: 70px 90px;
+        }
+        @include mobile{
+            background: url('../img/raster/catalog/gift-photo-mobile.jpg') no-repeat;
+            background-size: cover;
+            flex-direction: column;
+            padding: 60px 0 40px 0;
+            width: 100%;
         }
         &-icon{
             fill: $page-main-color;
@@ -52,6 +60,11 @@
                 text-align: left;
                 margin: 0;
             }
+            @include mobile{
+                margin-top: 65px;
+                text-align: center;
+            }
+
         }
     }
 }
@@ -71,6 +84,10 @@
             width: 100%;
             justify-content: space-between;
         }
+        @include mobile{
+            display: block;
+            margin: 0;
+        }
     }
     &__item{
         display: flex;
@@ -84,6 +101,11 @@
             border: 1px solid $border-primary-color;
             padding: 40px 35px;
         }
+        @include mobile{
+            border: none;
+            border-bottom: 1px solid $border-primary-color;
+            padding: 15px 0;
+        }
         &:first-child{
             border-top: 1px solid $border-primary-color;
         }
@@ -96,6 +118,9 @@
         flex-grow: 1;
         @include tablet{
             flex-grow: 0;
+        }
+        @include mobile{
+            margin-top: 15px;
         }
     }
     &__title{

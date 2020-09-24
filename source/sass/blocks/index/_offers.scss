@@ -1,10 +1,13 @@
 .offers{
+    margin-top: 80px;
+    @include mobile{
+        margin-top: 20px;
+    }
     & .index-columns{
         @include tablet{
             flex-direction: column;
         }
     }
-    margin-top: 80px;
     &__item{
         position: relative;
         padding: 40px 55px 60px 55px;
@@ -29,10 +32,17 @@
         @include tablet{
             margin: 0;
         }
+        @include mobile{
+            margin-left: 70px;
+            font-size: 24px;
+        }
     }
     &__inner{
         display: flex;
         align-items: center;
+        @include mobile{
+            position: relative;
+        }
     }
     &__icon{
         display: flex;
@@ -51,6 +61,13 @@
             top: 50%;
             transform: translate(0, -50%);
         }
+        @include mobile{
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: 0;
+            transform: translate(0, -25%);
+        }
         &--slim::before{
             content: url('../img/vector/cat-slim.svg');
             filter: brightness(0);
@@ -61,6 +78,10 @@
                 width: 140px;
                 height: 194px;
             }
+            @include mobile{
+                width: 35px;
+                height: 49px;
+            }
         }
         &--pro::before{
             content: url('../img/vector/cat-pro.svg');
@@ -69,6 +90,10 @@
             @include tablet{
                 width: 268px;
                 height: 112px;
+            }
+            @include mobile{
+                width: 67px;
+                height: 28px;
             }
         }
         &::before{
@@ -82,6 +107,9 @@
         color: $text-tertiary-color;
         @include tablet{
             max-width: 345px;
+        }
+        @include mobile{
+            max-width: none;
         }
     }
     &__link{

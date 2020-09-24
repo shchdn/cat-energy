@@ -133,8 +133,9 @@
     @include mobile{
         margin-top: 0;
         padding-top: 30px;
+        min-height: 0;
     }
-    &::after{
+    &::before{
         @include mobile{
             content: "";
             background: $promo-bg-mobile-color url('../img/raster/index-background-mobile.jpg') no-repeat;

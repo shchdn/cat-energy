@@ -4,10 +4,29 @@
     @include tablet{
         background: $page-secondary-color;
     }
+    @include mobile{
+        padding: 30px 0 20px 0;
+    }
     &__wrapper{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+    &__item{
+        @include mobile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 60px;
+            &:not(:last-child){
+                border-bottom: 1px solid $mobile-border-color;
+            }
+        }
+
     }
     &__copyright{
         display: flex;
@@ -30,11 +49,6 @@
     & li + li{
         margin-left: 30px;
     }
-    // &__item{
-    //     & + &{
-    //         margin-left: 30px;
-    //     }
-    // }
     &__icon{
         fill: $footer-icon-color;
         &:hover{
@@ -57,6 +71,10 @@
         }
         &:active{
             opacity: 0.3;
+        }
+        @include mobile{
+            width: 280px;
+            justify-content: space-between;
         }
     }
     &__logo{

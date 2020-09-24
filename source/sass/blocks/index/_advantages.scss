@@ -4,16 +4,27 @@
         border-bottom: 1px solid #e6e6e6;
         padding-bottom: 55px;
     }
+    @include mobile{
+        margin-top: 35px;
+    }
     &__title{
+        margin: 0;
         font-size: 60px;
+        @include mobile{
+            font-size: 36px;
+        }
     }
     &__list{
         @include reset-list;
         display: flex;
+        margin-top: 65px;
         justify-content: space-between;
         @include tablet{
             flex-wrap: wrap;
             justify-content: flex-start;
+        }
+        @include mobile{
+            margin-top: 35px;
         }
     }
     &__item{
@@ -27,6 +38,21 @@
             }
             &:not(:nth-child(1)):not(:nth-child(2)){
                 margin-top: 90px;
+            }
+        }
+        @include mobile{
+            max-width: none;
+            min-height: 0;
+            display: flex;
+            align-items: center;
+            &:nth-child(2n){
+                margin-left: 0;
+            }
+            &:not(:nth-child(1)):not(:nth-child(2)){
+                margin-top: 0;
+            }
+            &:not(:last-child){
+                margin-bottom: 20px;
             }
         }
         //Icon
@@ -44,8 +70,10 @@
         }
         &::before{
             display: flex;
+            // flex-grow: 1;
             justify-content: center;
             align-items: center;
+            flex-shrink: 0;
             width: 80px;
             height: 80px;
             background: $advantages-icon-color;
@@ -60,6 +88,9 @@
             
             font-size: 280px;
             color: $advantages-number-color;
+            @include mobile{
+                content: none;
+            }
         }
     }
     &__description{
@@ -67,5 +98,9 @@
         margin-top: 35px;
         font-family: $arial;
         color: $text-tertiary-color;
+        @include mobile{
+            margin: 0;
+            margin-left: 20px;
+        }
     }
 }

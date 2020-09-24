@@ -15,7 +15,7 @@ ymaps.ready(function () {
         }
     });
     myMap = new ymaps.Map('map', {
-            center: [59.939235, 30.313337],
+            center: [59.939235, 30.317337],
             zoom: 15,
             controls: [inputSearch, zoomControl]
         }, {
