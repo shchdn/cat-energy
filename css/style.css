@@ -713,8 +713,8 @@ body {
 @media (max-width: 768px) {
   .main-nav--no-js .main-nav__list, .main-nav--opened .main-nav__list {
     max-height: 9000px;
-    -webkit-transition: max-height 0.5s ease-in-out;
-    transition: max-height 0.5s ease-in-out; } }
+    -webkit-transition: max-height 1s ease-in-out;
+    transition: max-height 1s ease-in-out; } }
 
 #map {
   width: 100%;
