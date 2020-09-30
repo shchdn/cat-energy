@@ -11,7 +11,13 @@
         <div class="container">
             <div class="page-header__wrapper">
                 <div class="page-header__inner">
-                    <img alt="" class="page-header__logo-image" src="img/vector/logo-desktop.svg" width="202px">
+                    <a href="index.html" class="page-header__logo-link">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/vector/logo-desktop.svg">
+                            <source media="(min-width: 100px)" srcset="img/vector/logo-mobile-header.svg">
+                            <img alt="" class="page-header__logo-image" src="img/vector/logo-desktop.svg" width="202px">
+                        </picture>    
+                    </a>
                     <div class="menu-toggle">
                         <div class="menu-toggle__inner"></div>
                     </div>
