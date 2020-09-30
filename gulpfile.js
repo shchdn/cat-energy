@@ -14,7 +14,9 @@ var server = require("browser-sync").create();
 var rename = require("gulp-rename");
 
 var pump = require("pump");
-var uglify = require("gulp-uglify");
+// var uglify = require("gulp-uglify");
+const terser = require('gulp-terser');
+
 var concat = require("gulp-concat");
 
 var htmlmin = require("gulp-htmlmin")
@@ -41,7 +43,7 @@ gulp.task("compress", function (cb) {
   pump([
     gulp.src("source/js/**/*.js"),
     // sourcemaps.init(),
-    uglify(),
+    terser(),
     rename({suffix: ".min"}),
     // sourcemaps.write(),
     gulp.dest("build/js")
@@ -52,7 +54,7 @@ gulp.task("concat", gulp.series("compress", function (cb) {
   pump([
     gulp.src(["source/js/*.js"]),
     // sourcemaps.init(),
-    uglify(),
+    terser(),
     concat("main.min.js"),
     // sourcemaps.write(),
     gulp.dest("build/js")
