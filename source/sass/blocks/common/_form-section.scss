@@ -18,8 +18,16 @@
             margin-top: 70px;
             padding: 25px 30px;
         }
+        @include mobile{
+            margin: 25px -20px;
+            border-left: none;
+            border-right: none;
+        }
         & .form-section__field{
             width: 510px;
+            @include mobile{
+                width: auto;
+            }
         }
         & .form-section__item + .form-section__item{
             @include tablet{
@@ -52,6 +60,9 @@
         @include tablet{
             width: 100%;
         }
+        // @include mobile{
+        //     width: auto;
+        // }
 
         &--email input, &--phone input{
             padding-right: 50px;
@@ -61,6 +72,9 @@
         text-transform: uppercase;
 
         font-size: 20px;
+        @include mobile{
+            font-size: 16px;
+        }
     }
     &__name + input{
         margin-left: 15px;
@@ -77,6 +91,12 @@
 
         font-size: 20px;
         line-height: 20px;
+
+        @include mobile{
+            width: 100%;
+            font-size: 16px;
+            line-height: 18px;
+        }
 
         &:hover{
             border-color: $border-primary-color;
@@ -103,7 +123,8 @@
             align-items: center;
         }
         & > span::before{
-            display: block;
+            // display: block;
+            flex-shrink: 0;
             cursor: pointer;
 
             width: 40px;
@@ -153,5 +174,9 @@
         border: 1px solid $border-primary-color;
 
         font-size: 20px;
+        @include mobile{
+            padding: 15px;
+            font-size: 16px;
+        }
     }
 }

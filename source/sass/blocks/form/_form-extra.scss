@@ -13,14 +13,26 @@
             flex-wrap: wrap;
             width: 530px;
         }
+        @include mobile{
+            flex-direction: column;
+            width: 100%;
+        }
         & li {
             @include tablet{
                 min-width: 215px;
             }
         }
+        & li + li{
+            @include mobile{
+                margin-top: 15px;
+            }
+        }
         & li:not(:nth-child(1)):not(:nth-child(2)){
             @include tablet{
                 margin-top: 30px;
+            }
+            @include mobile{
+                margin-top: 15px;
             }
         }
     }

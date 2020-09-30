@@ -10,6 +10,9 @@
         @include tablet{
             flex-direction: column;
         }
+        @include mobile{
+            margin: 30px 0;
+        }
         & .form-section__field + .form-section__field{
             @include tablet{
                 margin-top: 20px;
