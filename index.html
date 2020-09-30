@@ -12,7 +12,11 @@
         <div class="container">
             <div class="page-header__wrapper">
                 <div class="page-header__inner">
-                    <img alt="" class="page-header__logo-image" src="img/vector/logo-desktop.svg" width="202px">
+                    <picture>
+                        
+                        <source media="(min-width: 768px)" srcset="img/vector/logo-desktop.svg" width="202px">
+                        <source media="(min-width: 100px)" srcset="img/vector/logo-mobile.svg" width="100px" height="100px">
+                    </picture>
                     <div class="menu-toggle">
                         <div class="menu-toggle__inner"></div>
                     </div>
@@ -39,7 +43,7 @@
                     <h2 class="promo__title">Функциональное питание для котов</h2>
                     <h3 class="promo__slogan">Занялся собой? Займись котом!</h3>
                     <button class="button-main promo__button">Подобрать программу</button>   
-                    <img alt="" class="promo__image" src="img/raster/index-can.png" width="552px" height="499px"> 
+                    <img alt="" class="promo__image" src="img/raster/index-can.png" height="499px" width="552px"> 
                 </div>
             </div>
         </section>
@@ -141,7 +145,7 @@
         <footer class="page-footer">
             <div class="container page-footer__wrapper">
                 <a href="" class="page-footer__item page-footer__logo-link">
-                    <img alt="" class="page-footer__logo" src="img/vector/footer-logo.svg" width="128px" height="24px">
+                    <img alt="" class="page-footer__logo" src="img/vector/footer-logo.svg" height="24px" width="128px">
                 </a>
                 <ul class="page-footer__item social-list">
                     <li>
