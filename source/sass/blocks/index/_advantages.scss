@@ -57,25 +57,59 @@
         }
         //Icon
         &--leaf::before{
-            content: url('../img/raster/advantage-leaf.png');
+            background-image: url('../img/raster/advantage-leaf@1x.png');
+            @include retina{
+            background-image: url('../img/raster/advantage-leaf@2x.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+
+            }
         }
         &--powder::before{
-            content: url('../img/raster/advantage-powder.png');
+            background-image: url('../img/raster/advantage-powder@1x.png');
+            @include retina{
+            background-image: url('../img/raster/advantage-powder@2x.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+
+            }
         }
         &--meal::before{
-            content: url('../img/raster/advantage-meal.png');
+            background-image: url('../img/raster/advantage-dining@1x.png');
+            @include retina{
+            background-image: url('../img/raster/advantage-dining@2x.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+
+            }
         }
         &--clock::before{
-            content: url('../img/raster/advantage-clock.png');
+            background-image: url('../img/raster/advantage-clock@1x.png');
+            @include retina{
+            background-image: url('../img/raster/advantage-clock@2x.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+
+            }
         }
         &::before{
+            content: "";
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-shrink: 0;
             width: 80px;
             height: 80px;
-            background: $advantages-icon-color;
+            background-color: $advantages-icon-color;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px;
+            @include mobile{
+                width: 60px;
+                height: 60px;
+            }
         }
         //Number
         &::after{

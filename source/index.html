@@ -44,8 +44,13 @@
                     <h1 class="visually-hidden">Cat Energy - магазин спортивного питания для котов</h1>
                     <h2 class="promo__title">Функциональное питание для котов</h2>
                     <h3 class="promo__slogan">Занялся собой? Займись котом!</h3>
-                    <button class="promo__button button-main">Подобрать программу</button>   
-                    <img class ="promo__image" src="img/raster/index-can.png" alt="" width="552px" height="499px"> 
+                    <button class="promo__button button-main">Подобрать программу</button>
+                    <picture>
+                        <source media="(min-width: 1300px)" srcset="img/raster/index-can-desktop@1x.png 1x, img/raster/index-can-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/raster/index-can-tablet@1x.jpg 1x, img/raster/index-can-tablet@2x.jpg 2x">
+                        <source media="(min-width: 300px)" srcset="img/raster/index-can-mobile@1x.png 1x, img/raster/index-can-mobile@2x.png 2x">
+                        <img class ="promo__image" src="img/raster/index-can-mobile@1x.png" alt="" width="552px" height="499px"> 
+                    </picture>   
                 </div>
             </div>
         </section>
@@ -119,7 +124,12 @@
                     </div>
                     <div class="slider">
                         <div class="slider__wrapper">
-                            <img class="slider__photo" src="img/raster/before-desktop.png" alt="">
+                            <picture>
+                                <source media="(min-width: 1300px)" srcset="img/raster/before-desktop@1x.png 1x, img/raster/before-desktop@2x.png 2x">
+                                <source media="(min-width: 768px)" srcset="img/raster/before-tablet@1x.png 1x, img/raster/before-tablet@2x.png 2x">
+                                <source media="(min-width: 300px)" srcset="img/raster/before-mobile@1x.png 1x, img/raster/before-mobile@2x.png 2x">
+                                <img class="slider__photo" src="img/raster/before-mobile@1x.png" alt="">
+                            </picture>           
                             <div class="slider__inner">
                                 <span class="slider__text">Было</span>
                                 <div class="slider__scale">

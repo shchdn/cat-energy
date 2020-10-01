@@ -17,7 +17,7 @@
         }
     }
     &__gift{
-        background: url('../img/raster/catalog/gift-photo-desktop.jpg') no-repeat;
+        background: url('../img/raster/gift-photo-desktop@1x.jpg') no-repeat;
         background-size: cover;
         position: absolute;
         top: 0;
@@ -28,8 +28,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @include retina{
+            background: url('../img/raster/gift-photo-desktop@2x.jpg') no-repeat;
+        }
         @include tablet{
-            background: url('../img/raster/catalog/gift-photo-tablet.jpg') no-repeat;
+            background: url('../img/raster/gift-photo-tablet@1x.jpg') no-repeat;
                 margin-top: 70px;
             position: static;
             width: calc(100% - 180px);
@@ -38,13 +41,19 @@
             justify-content: space-between;
             align-items: center;
             padding: 70px 90px;
+            @include retina{
+                background: url('../img/raster/gift-photo-tablet@2x.jpg') no-repeat;
+            }    
         }
         @include mobile{
-            background: url('../img/raster/catalog/gift-photo-mobile.jpg') no-repeat;
+            background: url('../img/raster/gift-photo-mobile@1x.jpg') no-repeat center;
             background-size: cover;
             flex-direction: column;
             padding: 60px 0 40px 0;
             width: 100%;
+            @include retina{
+                background: url('../img/raster/gift-photo-mobile@2x.jpg') no-repeat center;
+            }    
         }
         &-icon{
             fill: $page-main-color;

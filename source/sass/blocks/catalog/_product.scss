@@ -20,8 +20,11 @@
     width: 165px;
     padding: 40px;
     @include mobile{
+        padding: 20px;
+        padding-top: 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         width: auto;
         margin: 0;
         border-bottom: 1px solid $mobile-border-color;
@@ -38,10 +41,11 @@
         justify-content: center;
         width: 100%;
         @include mobile{
-            margin-left: auto;
+            // margin-left: auto;
             width: 50%;
             display: flex;
             flex-direction: column;
+            margin-top: 25px;
         }
     }
     &__photo-wrapper{
@@ -51,11 +55,28 @@
         justify-content: flex-end;
         height: 208px;
         @include mobile{
-            position: absolute;
-            margin-top: 0;
-            left: 25%;
-            transform: translate(-50%);
+            // display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            // left: 25%;
+            // transform: translate(-50%);
+            height: unset;
         }
+    }
+    &__photo{
+        // margin-left: 50%;
+        // margin-top: 50%;
+        // transform: translate(0, 50%);
+        // display: block;
+        // position: absolute;
+        // top: ;
+        bottom: 0;
     }
     &__title, &__weight{
         font-size: 20px;
@@ -63,6 +84,7 @@
         text-align: center;
         @include mobile{
             text-align: left;
+            font-size: 16px;
         }
     }
     &__title{
@@ -71,6 +93,9 @@
     }
     &__parameters{
         margin-top: 30px;
+        @include mobile{
+            margin-top: 15px;
+        }
     }
     &__button {
         width: 100%;

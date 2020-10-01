@@ -27,8 +27,9 @@
             width: calc(100% - 40px);
             align-items: center;
             justify-content: space-between;
-            padding: 10px 20px 15px;
+            padding: 0 20px;
             border-bottom: 1px solid $mobile-border-color;
+            height: 65px;
             .page-header--index &{
                 border-bottom: none;
             }
@@ -79,10 +80,13 @@
         right: 0px; 
         width: 50%;
 
-        background: $promo-bg-color url('../img/raster/index-background-desktop.jpg');
+        background: $promo-bg-color url('../img/raster/index-background-desktop@1x.jpg');
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: cover;
+        @include retina{
+            background: $promo-bg-color url('../img/raster/index-background-desktop@2x.jpg');
+        }
         @include tablet{
             content: none;
           }

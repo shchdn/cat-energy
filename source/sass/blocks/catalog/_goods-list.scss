@@ -58,6 +58,9 @@
         text-transform: uppercase;
         min-width: 320px;
         margin: 0;
+        @include mobile{
+            min-width: unset;
+        }
     }
     &__button{
         width: 245px;

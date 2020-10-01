@@ -13,6 +13,9 @@
     }
     &__parameters{
         display: flex;
+        @include mobile{
+            flex-direction: column;
+        }
         & .form-section__field:not(:last-child){
             margin-bottom: 20px;
         }

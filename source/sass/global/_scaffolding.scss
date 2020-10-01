@@ -30,9 +30,9 @@ body{
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
-    width: 1px;
     height: 1px;
     margin: -1px;
+    z-index: -1000;
 }
 
 .title-line{
@@ -42,6 +42,10 @@ body{
     padding: 0 40px;   
     margin: 0; 
     margin-left: -40px;
+    @include mobile{
+        padding: 0 20px;
+        margin-left: -20px;
+    }
     &::before{
         content: '';
         position: absolute;

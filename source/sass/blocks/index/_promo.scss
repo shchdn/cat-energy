@@ -12,7 +12,7 @@
     &::before{
         @include mobile{
             content: "";
-            background: $promo-bg-mobile-color url('../img/raster/index-background-mobile.jpg') no-repeat;
+            background: $promo-bg-mobile-color url('../img/raster/index-background-mobile@1x.jpg') no-repeat;
             background-position: center;
             background-size: cover;
             height: 305px;
@@ -20,7 +20,11 @@
             top: 0;
             width: calc(100%);
             z-index: -10;
-
+            @include retina{
+                background: $promo-bg-mobile-color url('../img/raster/index-background-mobile@2x.jpg') no-repeat;
+                background-position: center;
+                background-size: cover;    
+            }
         }
     }
     & .container{
