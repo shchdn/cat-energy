@@ -1277,28 +1277,37 @@ body {
         .advantages__item:not(:last-child) {
           margin-bottom: 20px; } }
     .advantages__item--leaf::before {
-      background-image: url("../img/raster/advantage-leaf@1x.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 50px; }
+      background-image: url("../img/raster/advantage-leaf@1x.png"); }
       @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
         .advantages__item--leaf::before {
-          background-image: url("../img/raster/advantage-leaf@2x.png"); } }
+          background-image: url("../img/raster/advantage-leaf@2x.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 50px; } }
     .advantages__item--powder::before {
       background-image: url("../img/raster/advantage-powder@1x.png"); }
       @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
         .advantages__item--powder::before {
-          background-image: url("../img/raster/advantage-powder@2x.png"); } }
+          background-image: url("../img/raster/advantage-powder@2x.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 50px; } }
     .advantages__item--meal::before {
       background-image: url("../img/raster/advantage-dining@1x.png"); }
       @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
         .advantages__item--meal::before {
-          background-image: url("../img/raster/advantage-dining@2x.png"); } }
+          background-image: url("../img/raster/advantage-dining@2x.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 50px; } }
     .advantages__item--clock::before {
       background-image: url("../img/raster/advantage-clock@1x.png"); }
       @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
         .advantages__item--clock::before {
-          background-image: url("../img/raster/advantage-clock@2x.png"); } }
+          background-image: url("../img/raster/advantage-clock@2x.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 50px; } }
     .advantages__item::before {
       content: "";
       display: -webkit-box;
