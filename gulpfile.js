@@ -126,7 +126,7 @@ gulp.task("html", function () {
 
 // Images optimization and copy in /build
 gulp.task("images", function() {
-  return gulp.src("source/img/**/*.*")
+  return gulp.src("source/img/**/*.*", "!source/img/raster/dont_optimize/*.*")
     .pipe(imagemin([
 //      imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({progressive: true}),
@@ -186,6 +186,17 @@ gulp.task("copy-images", function() {
     //return del("build/img/min/");
 });
 
+gulp.task("copy-not-opitmized-images", function() {
+  return gulp.src([
+    "source/img/raster/dont_optimize/*.*"
+    ], {
+      base: "source/img/raster/dont_optimize"
+    })
+      .pipe(gulp.dest("build/img/raster/"))
+    //return del("build/img/min/");
+});
+
+
 gulp.task("svg", function () {
   return gulp.src("source/img/vector/**/*.svg")
     .pipe(svgmin())
@@ -236,7 +247,8 @@ gulp.task("build", gulp.series(
 	"clearcache",
 	"copy",
 	//"cpcomb",
-	"copy-images",
+  "copy-images",
+  "copy-not-opitmized-images",
 	"webp",
 	"sprite",
 	"style",
