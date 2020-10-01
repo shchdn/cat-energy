@@ -966,7 +966,9 @@ body {
       z-index: -10; } }
   @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 768px) and (min-resolution: 144dpi), (max-width: 768px) and (min-resolution: 1.5dppx) {
     .promo::before {
-      background: #63a73a url("../img/raster/index-background-mobile@2x.jpg") no-repeat center; } }
+      background: #63a73a url("../img/raster/index-background-mobile@2x.jpg") no-repeat;
+      background-position: center;
+      background-size: cover; } }
   .promo .container {
     display: -webkit-box;
     display: -ms-flexbox;
