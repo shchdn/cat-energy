@@ -1367,6 +1367,10 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
     border-radius: 3px;
     border: 1px solid #cdcdcd;
@@ -1382,7 +1386,8 @@ body {
         margin-left: 0; } }
   .stats-list__value {
     font-size: 30px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
     @media (max-width: 768px) {
       .stats-list__value {
         font-size: 24px; } }
