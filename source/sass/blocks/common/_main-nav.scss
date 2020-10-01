@@ -1,0 +1,91 @@
+.main-nav {
+    position: relative;
+    @include mobile{
+        width: 100%;
+    }
+    &__list {
+        @include reset-list;
+        display: flex;
+        max-width: 480px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        @include mobile{
+            display: none;
+            overflow: hidden;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            text-align: center;
+            font-weight: 500;
+            max-width: none;
+        }
+    }
+    &__item {
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-size: 20px;
+        @include tablet{
+            font-size: 18px;
+        }
+        @include mobile{
+            border-top: 1px dashed $mobile-border-color;
+            padding: 25px 0;
+            &:first-child{
+                border-top: none;
+            }
+            &:last-child{
+                border-bottom: 1px solid $mobile-border-color;
+            }
+            .page-header--index &{
+                border-bottom: none;
+            }
+            .page-header--index &:first-child{
+                border-top: 1px dashed $mobile-border-color;
+            }
+
+        }
+        &--active{
+            border-bottom: 2px solid $nav-item-border-color;
+            pointer-events: none;
+            @include mobile{
+                border-bottom: none;
+            }
+            .page-header--index &{
+                border-bottom: 2px solid $text-secondary-color;
+                @include tablet {
+                    border-bottom: 2px solid $nav-item-border-color;
+                }
+                @include mobile{
+                    border-bottom: none;
+                }    
+            }
+        }
+
+        &:hover{
+            opacity: 0.6;
+        }
+        &:active{
+            opacity: 0.3;
+        }
+        & a{
+            text-decoration: none;
+            color: $text-primary-color;
+        }
+        .page-header--index & a{
+            color: $text-secondary-color;
+            @include tablet{
+                color: $text-primary-color;
+            }
+        }
+        & + &  {
+            margin-left: 35px;
+            @include mobile{
+                margin-left: 0;
+            }
+        }
+    }
+    &--no-js &__list, &--opened &__list{
+        @include mobile{
+            display: flex;
+        }
+    }
+}

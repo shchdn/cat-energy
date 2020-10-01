@@ -34,3 +34,20 @@ body{
     height: 1px;
     margin: -1px;
 }
+
+.title-line{
+    display: inline-flex;
+    align-items: center;
+    background: $page-main-color;
+    padding: 0 40px;   
+    margin: 0; 
+    margin-left: -40px;
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: -5;
+        border-bottom: 3px solid $title-line-color;
+        width: 100%;
+        left: 0;
+    }
+}

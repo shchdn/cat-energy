@@ -5,65 +5,67 @@
         height: 360px;
     }
 }
-.map-main{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
 #catalog .map-info__wrapper, #catalog .map-main,
 #form .map-info__wrapper, #form .map-main{
     @include tablet{
         background: $page-secondary-color;
     }
 }
-.map-info{
-    &__wrapper{
-        width: 420px;
-        background: $page-main-color;
-        position: absolute;
-        z-index: 5;
-        top: 0;
-        bottom: 0;
-        margin: 95px 0;
-        left: 110px;
-        padding: 70px 90px 70px 75px;
-        max-width: 570px;
-        @include tablet{
-            position: relative;
-            width: 708px;
-            padding: 70px 30px;
-            margin: 0 auto;
-            left: 0;
-            max-width: none;
-        }
-        @include mobile{
-            width: auto;
-        }
-    }
-    &__content{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__title, &__address{
-        max-width: 155px;
-    }
-    &__title{
-        margin: 0;
-        text-transform: uppercase;
-        font-size: 20px;
-        @include mobile{
-            font-size: 16px;
-        }
-    }
-    &__address{
-        margin: 0;
+.map{
+    &-main{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        font-family: $arial;
-        @include mobile{
-            font-size: 14px;
+        position: relative;
+    }
+    &-info{
+        &__wrapper{
+            width: 420px;
+            background: $page-main-color;
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            bottom: 0;
+            margin: 95px 0;
+            left: 110px;
+            padding: 70px 90px 70px 75px;
+            max-width: 570px;
+            @include tablet{
+                position: relative;
+                width: 708px;
+                padding: 70px 30px;
+                margin: 0 auto;
+                left: 0;
+                max-width: none;
+            }
+            @include mobile{
+                width: auto;
+            }
+        }
+        &__content{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__title, &__address{
+            max-width: 155px;
+        }
+        &__title{
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 20px;
+            @include mobile{
+                font-size: 16px;
+            }
+        }
+        &__address{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: $arial;
+            @include mobile{
+                font-size: 14px;
+            }
         }
     }
 }

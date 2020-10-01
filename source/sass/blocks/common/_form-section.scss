@@ -1,40 +1,7 @@
 .form-section{
     margin: 0;
     padding: 0;
-
     border: none;
-
-    &--cat-parameters{
-        display: flex;
-        & .form-section__field:not(:last-child){
-            margin-bottom: 20px;
-        }
-    }
-    &--cat-programm{
-        padding: 0px 30px;
-
-        border: 1px solid $border-primary-color;
-        @include tablet{
-            margin-top: 70px;
-            padding: 25px 30px;
-        }
-        @include mobile{
-            margin: 25px -20px;
-            border-left: none;
-            border-right: none;
-        }
-        & .form-section__field{
-            width: 510px;
-            @include mobile{
-                width: auto;
-            }
-        }
-        & .form-section__item + .form-section__item{
-            @include tablet{
-                margin-top: 15px;
-            }
-        }
-    }
     &__icon{
         position: absolute;
         right: 20px;
@@ -43,8 +10,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-
         height: 100%;
+
         @include reset-list;
         @include tablet{
             justify-content: space-between;
@@ -52,17 +19,13 @@
     }
     &__field{
         position: relative;
-
         display: flex;
         align-items: center;
-
         width: 570px;
+
         @include tablet{
             width: 100%;
         }
-        // @include mobile{
-        //     width: auto;
-        // }
 
         &--email input, &--phone input{
             padding-right: 50px;
@@ -70,8 +33,8 @@
     }
     &__name{
         text-transform: uppercase;
-
         font-size: 20px;
+
         @include mobile{
             font-size: 16px;
         }
@@ -81,14 +44,9 @@
     }
     &__input{
         flex: 1;
-
         padding: 9px 20px;
-
         text-transform: uppercase;
-
-        border: 1px solid rgba($color: $border-primary-color, $alpha: 0.5);
-        
-
+        border: 1px solid $border-primary-color;
         font-size: 20px;
         line-height: 20px;
 
@@ -123,21 +81,16 @@
             align-items: center;
         }
         & > span::before{
-            // display: block;
+            content: '';
             flex-shrink: 0;
             cursor: pointer;
-
             width: 40px;
             height: 40px;
-
-            content: '';
-
             border: 1px solid $border-primary-color;
         }
         & > input{
             position: absolute;
             z-index: -10;
-
             opacity: 0;
         }
     }
@@ -146,7 +99,7 @@
             border-radius: 50%;
         }
         & > input:checked + span::before{
-            background-image: radial-gradient(#68b738 0,#68b738 9px,#fff 10px,#fff 100%);
+            background-image: $radio-circle-background;
         }
     }
     &__checkbox{
@@ -167,13 +120,11 @@
     }
     &__textarea{
         padding: 20px;
-
         resize: none;
         text-transform: uppercase;
-
         border: 1px solid $border-primary-color;
-
         font-size: 20px;
+        
         @include mobile{
             padding: 15px;
             font-size: 16px;

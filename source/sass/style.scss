@@ -5,25 +5,31 @@
 @import './global/fonts';
 @import './global/colors';
 @import './global/scaffolding';
-@import './global/common';
 @import './global/buttons';
 
 // Blocks
     // Common
     @import './blocks/common/page-header';
+    @import './blocks/common/main-nav';
+    @import './blocks/common/menu-toggle';
     @import './blocks/common/map';
     @import './blocks/common/page-footer';
+    @import './blocks/common/social-list';
     @import './blocks/common/form-section';
     // Index
+    @import './blocks/index/promo';
     @import './blocks/index/offers';
     @import './blocks/index/advantages';
     @import './blocks/index/example';
     // Catalog
     @import './blocks/catalog/catalog';
+    @import './blocks/catalog/product';
+    @import './blocks/catalog/parameters-list';
+    @import './blocks/catalog/goods-list';
     @import './blocks/catalog/extra-goods';
     // Form
     @import './blocks/form/form-intro';
-    @import './blocks/form/cat-info';
+    @import './blocks/form/form-info';
     @import './blocks/form/form-contacts';
     @import './blocks/form/form-comment';
     @import './blocks/form/form-extra';
@@ -33,4 +39,6 @@
 // TODO: 
 // исправить везде в секциях марджины на паддинги
 // вытащить общие стили из индексблоков и добавить в коммон
-// fix footer tablet padding bottom
+// pics for retina
+// checkbox size for mobile
+//.index columns убрать

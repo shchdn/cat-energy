@@ -1,7 +1,7 @@
 .advantages{
     margin-top: 80px;
     @include tablet{
-        border-bottom: 1px solid #e6e6e6;
+        border-bottom: 1px solid $mobile-border-color;
         padding-bottom: 55px;
     }
     @include mobile{
@@ -70,7 +70,6 @@
         }
         &::before{
             display: flex;
-            // flex-grow: 1;
             justify-content: center;
             align-items: center;
             flex-shrink: 0;

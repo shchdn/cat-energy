@@ -1,0 +1,17 @@
+.social-list{
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    & li + li{
+        margin-left: 30px;
+    }
+    &__icon{
+        fill: $footer-icon-color;
+        &:hover{
+            fill: $social-hover-color;
+        }
+        &:active{
+            opacity: 0.3;
+        }
+    }
+}

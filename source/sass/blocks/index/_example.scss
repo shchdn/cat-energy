@@ -32,7 +32,6 @@
             background: $page-main-color;
         }
         @include mobile{
-            // display: inline-block;
             bottom: -15px;
             text-align: center;
             max-width: 65px;
@@ -150,8 +149,6 @@
     @include tablet{
         background: $page-secondary-color;
         margin-top: 240px;
-        // margin: 0 auto;
-        // width: 708px;
         
     }
     &__wrapper{
@@ -172,7 +169,6 @@
         margin-top: -180px;
         @include mobile{
             width: 100%;
-            // height: 232px;  
         }
     }
     &__scale, &__grip{

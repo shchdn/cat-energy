@@ -1,0 +1,78 @@
+.goods-list{
+    @include reset-list;
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+    @include tablet{
+        width: 100%;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        @include tablet{
+            width: 100%;
+            justify-content: space-between;
+        }
+        @include mobile{
+            display: block;
+            margin: 0;
+        }
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid $border-primary-color;
+        @include tablet{
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid $border-primary-color;
+            padding: 40px 35px;
+        }
+        @include mobile{
+            border: none;
+            border-bottom: 1px solid $border-primary-color;
+            padding: 15px 0;
+        }
+        &:first-child{
+            border-top: 1px solid $border-primary-color;
+        }
+    }
+    &__description{
+        font-family: $arial;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        @include tablet{
+            flex-grow: 0;
+        }
+        @include mobile{
+            margin-top: 15px;
+        }
+    }
+    &__title{
+        font-size: 20px;
+        text-transform: uppercase;
+        min-width: 320px;
+        margin: 0;
+    }
+    &__button{
+        width: 245px;
+        margin-left: 45px;
+        padding: 13px;
+        @include tablet{
+            margin-left: 0;
+            margin-top: 25px;
+            width: 100%;
+        }
+    }
+    &__price{
+        max-width: 100px;
+        @include tablet{
+            margin-left: 25px;
+        }
+    }
+}

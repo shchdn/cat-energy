@@ -1,0 +1,23 @@
+.parameters-list{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: $arial;
+    margin-bottom: 35px;
+    @include mobile{
+        max-width: 200px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    & tr{
+        border-bottom: 1px solid $border-primary-color;
+        @include mobile{
+            border: none;
+        }
+    }
+    & td{
+        padding: 7px 0;
+    }
+    & td:last-child{
+        text-align: right;
+    }
+}
