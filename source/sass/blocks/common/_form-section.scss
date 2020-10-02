@@ -4,7 +4,8 @@
     border: none;
     &__icon{
         position: absolute;
-        right: 20px;
+        right: 40px;
+        transform: translate(100%);
     }
     &__list{
         display: flex;
@@ -87,6 +88,10 @@
             width: 40px;
             height: 40px;
             border: 1px solid $border-primary-color;
+            @include mobile{
+                width: 30px;
+                height: 30px;
+            }
         }
         & > input{
             position: absolute;
@@ -100,6 +105,9 @@
         }
         & > input:checked + span::before{
             background-image: $radio-circle-background;
+            @include mobile{
+                background-image: $radio-circle-mobile-background;
+            }
         }
     }
     &__checkbox{
@@ -110,6 +118,9 @@
     }
     &__checkbox > input + span::before, &__radio > input + span::before{
         margin-right: 20px;
+        @include mobile{
+            margin-right: 15px;
+        }
     }
     &__checkbox:hover > span::before, &__radio:hover > span::before{
         border-color: $input-hover-border-color;

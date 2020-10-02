@@ -86,6 +86,9 @@
         background-size: cover;
         @include retina{
             background: $promo-bg-color url('../img/raster/index-background-desktop@2x.jpg');
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: cover;    
         }
         @include tablet{
             content: none;

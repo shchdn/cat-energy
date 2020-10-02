@@ -1,0 +1,70 @@
+.slider{
+    @include tablet{
+        background: $page-secondary-color;
+        margin-top: 240px;
+        
+    }
+    &__wrapper{
+        @include tablet{
+            margin: 0 auto;
+            max-width: 708px;
+            padding: 0 30px 75px;
+            position: relative;
+        }
+        @include mobile{
+            width: auto;
+        }
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+    }
+    &__photo{
+        margin-top: -180px;
+        @include mobile{
+            width: 100%;
+        }
+    }
+    &__scale, &__grip{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__scale{
+        flex-grow: 1;
+        height: 6px;
+        background: $scale-background-color;
+        border-radius: 3px;
+    }
+    &__grip{
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        box-shadow: $grip-shadow;
+        border: 1px solid $border-primary-color;
+        background: $page-main-color;
+        &::before{
+            content: '';
+            background: $button-main-color;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: block;
+        }
+        &:hover{
+            cursor: pointer;
+            box-shadow: $grip-hover-shadow;
+        }
+    }
+    &__text{
+        text-transform: uppercase;
+        border-bottom: 1px dotted rgba($color: $text-primary-color, $alpha: 0.25);
+        padding-bottom: 5px;
+        &:first-child{
+            margin-right: 25px;
+        }
+        &:last-child{
+            margin-left: 25px;
+        }
+    }
+}

@@ -79,10 +79,11 @@
         }
     }
     & .container{
-        width: 1300px;
+        max-width: 1300px;
         padding: 0;
         @include tablet {
-            width: 768px;
+            width: auto;
+            max-width: 708px;
             padding: 0 30px;
         }    
         @include mobile{
@@ -94,6 +95,7 @@
         @include reset-list;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         @include mobile{
             flex-direction: column;
         }

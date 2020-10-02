@@ -14,11 +14,11 @@ body{
 }
 
 .container {
-    width: 1220px;
+    max-width: 1220px;
     padding: 0 40px;
     margin: 0 auto;
     @include tablet {
-        width: 708px;
+        max-width: 708px;
         padding: 0 30px;
     }
     @include mobile {

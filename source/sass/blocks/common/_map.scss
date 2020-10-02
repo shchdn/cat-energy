@@ -1,6 +1,8 @@
 #map{
     width: 100%;
     height: 400px;
+    background: url("../img/raster/bg-map-desktop@1x.png") center;
+    background-size: cover;
     @include mobile{
         height: 360px;
     }
@@ -31,11 +33,12 @@
             max-width: 570px;
             @include tablet{
                 position: relative;
-                width: 708px;
+                // max-width: 708px;
+                width: 625px;
                 padding: 70px 30px;
                 margin: 0 auto;
                 left: 0;
-                max-width: none;
+                // max-width: none;
             }
             @include mobile{
                 width: auto;

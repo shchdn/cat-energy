@@ -28,7 +28,13 @@
         }
         @include mobile{
             border-top: 1px dashed $mobile-border-color;
-            padding: 25px 0;
+            padding: 0;
+            & > a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 70px;
+            }
             &:first-child{
                 border-top: none;
             }
