@@ -20,8 +20,15 @@
         align-items: center;
     }
     &__photo{
+        width: 690px;
+        height: 517px;
         margin-top: -180px;
+        @include tablet{
+            width: 677px;
+            height: 499px;
+        }
         @include mobile{
+            height: unset;
             width: 100%;
         }
     }
