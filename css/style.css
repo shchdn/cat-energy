@@ -351,7 +351,7 @@ body {
   position: absolute;
   clip: rect(0 0 0 0);
   height: 1px;
-  margin: -1px;
+  width: 1px;
   z-index: -1000; }
 
 .title-line {
@@ -663,9 +663,27 @@ body {
   height: 400px;
   background: url("../img/raster/bg-map-desktop@1x.png") center;
   background-size: cover; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    #map {
+      background: url("../img/raster/bg-map-desktop@2x.png") center;
+      background-size: cover; } }
+  @media (max-width: 1299px) {
+    #map {
+      background: url("../img/raster/bg-map-tablet@1x.png") center;
+      background-size: cover; } }
+  @media (max-width: 1299px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1299px) and (min-resolution: 144dpi), (max-width: 1299px) and (min-resolution: 1.5dppx) {
+    #map {
+      background: url("../img/raster/bg-map-tablet@2x.png") center;
+      background-size: cover; } }
   @media (max-width: 767px) {
     #map {
+      background: url("../img/raster/bg-map-mobile@1x.png") center;
+      background-size: cover;
       height: 360px; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    #map {
+      background: url("../img/raster/bg-map-mobile@2x.png") center;
+      background-size: cover; } }
 
 @media (max-width: 1299px) {
   #catalog .map-info__wrapper, #catalog .map-main,
@@ -1579,9 +1597,16 @@ body {
           align-items: center; }
 
 .slider__photo {
+  width: 690px;
+  height: 517px;
   margin-top: -180px; }
+  @media (max-width: 1299px) {
+    .slider__photo {
+      width: 677px;
+      height: 499px; } }
   @media (max-width: 767px) {
     .slider__photo {
+      height: unset;
       width: 100%; } }
 
 .slider__scale, .slider__grip {
@@ -1843,8 +1868,6 @@ body {
         margin-top: auto;
         margin-bottom: auto;
         height: unset; } }
-  .product__photo {
-    bottom: 0; }
   .product__title, .product__weight {
     font-size: 20px;
     text-transform: uppercase;
