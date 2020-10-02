@@ -3,8 +3,26 @@
     height: 400px;
     background: url("../img/raster/bg-map-desktop@1x.png") center;
     background-size: cover;
+    @include retina{
+        background: url("../img/raster/bg-map-desktop@2x.png") center;
+        background-size: cover;    
+    }
+    @include tablet{
+        background: url("../img/raster/bg-map-tablet@1x.png") center;
+        background-size: cover;
+        @include retina{
+            background: url("../img/raster/bg-map-tablet@2x.png") center;
+            background-size: cover;    
+        }    
+    }
     @include mobile{
+        background: url("../img/raster/bg-map-mobile@1x.png") center;
+        background-size: cover;    
         height: 360px;
+        @include retina{
+            background: url("../img/raster/bg-map-mobile@2x.png") center;
+            background-size: cover;    
+        }    
     }
 }
 #catalog .map-info__wrapper, #catalog .map-main,
@@ -33,12 +51,10 @@
             max-width: 570px;
             @include tablet{
                 position: relative;
-                // max-width: 708px;
                 width: 625px;
                 padding: 70px 30px;
                 margin: 0 auto;
                 left: 0;
-                // max-width: none;
             }
             @include mobile{
                 width: auto;
