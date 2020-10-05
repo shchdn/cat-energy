@@ -1577,6 +1577,10 @@ body {
     background: #f2f2f2;
     margin-top: 240px; } }
 
+@media (max-width: 767px) {
+  .slider {
+    margin-top: 45px; } }
+
 .slider__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1587,15 +1591,18 @@ body {
           flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  position: relative; }
   @media (max-width: 1299px) {
     .slider__wrapper {
       margin: 0 auto;
-      max-width: 708px;
-      padding: 0 30px 75px;
+      max-width: 677px;
+      padding: 0;
+      margin-bottom: 75px;
       position: relative; } }
   @media (max-width: 767px) {
     .slider__wrapper {
+      max-width: 350px;
       width: auto; } }
 
 .slider__inner {
@@ -1612,12 +1619,41 @@ body {
   margin-top: -180px; }
   @media (max-width: 1299px) {
     .slider__photo {
-      width: 677px;
-      height: 499px; } }
+      max-width: 677px; } }
   @media (max-width: 767px) {
     .slider__photo {
-      height: unset;
-      width: 100%; } }
+      height: 275px;
+      max-width: 311px;
+      margin-top: 0; } }
+  .slider__photo--before {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
+    width: 50%;
+    left: 0; }
+    @media (max-width: 767px) {
+      .slider__photo--before {
+        width: 100%;
+        margin-left: 8px; } }
+  .slider__photo--after {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: right;
+       object-position: right;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 30px; }
+    @media (max-width: 1299px) {
+      .slider__photo--after {
+        top: 0;
+        bottom: 0; } }
+    @media (max-width: 767px) {
+      .slider__photo--after {
+        width: 0;
+        -o-object-position: right;
+           object-position: right; } }
 
 .slider__scale, .slider__grip {
   display: -webkit-box;
@@ -1639,6 +1675,7 @@ body {
 .slider__grip {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+  margin-left: 50%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-pack: center;
