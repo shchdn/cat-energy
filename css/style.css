@@ -1634,7 +1634,8 @@ body {
   transition: width 1s ease-in-out; }
   @media (max-width: 1299px) {
     .slider__photo {
-      max-width: 677px; } }
+      max-width: 677px;
+      height: 499px; } }
   @media (max-width: 767px) {
     .slider__photo {
       height: 275px;
