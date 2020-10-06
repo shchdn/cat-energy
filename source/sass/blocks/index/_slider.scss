@@ -12,21 +12,9 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-            & picture {
-                // display: flex;
-                // flex-direction: column;
-                // width: 690px;
-            }
-            & picture:nth-child(2){
-                // align-self: center;
-                // transform: translate(-100%);
-                // position: absolute;
-                // z-index: 100;
-            }
         @include tablet{
             margin: 0 auto;
             max-width: 677px;
-            // padding: 0 30px 75px;
             padding: 0;
             margin-bottom: 75px;
             position: relative;
@@ -39,19 +27,32 @@
     &__inner{
         display: flex;
         align-items: center;
+        & .slider__text:first-child{
+            margin-right: 25px;
+        }
+        & .slider__text:last-child{
+            margin-left: 25px;
+        }
+
     }
     &__photo{
         width: 690px;
         height: 517px;
         margin-top: -180px;
+        transition: width 1s ease-in-out;
         @include tablet{
             max-width: 677px;
-            // height: 499px;
+            height: 499px;
         }
         @include mobile{
             height: 275px;
             max-width: 311px;
             margin-top: 0;
+            @media(max-width: 360px){
+                height: 210px;
+                max-width: 250px;
+    
+            }
 
         }
         &--before{
@@ -61,33 +62,22 @@
             left: 0;
             @include mobile{
                 width: 100%;
-                margin-left: 8px;
             }
         }
         &--after{
-            // align-self: right;
             object-fit: cover;
             object-position: right;
             width: 50%;
             position: absolute;
-            // margin-left: auto;
             right: 0;
             bottom: 30px;
             @include tablet{
-                // z-index: 10;
                 top: 0;
                 bottom: 0;
-                // max-width: 311px;
-                // left: 0;
-                // right: 30px;
             }
             @include mobile{
-                // max-width: 251px;
                 width: 0;
                 object-position: right;
-
-                // transform: translate(30px);
-                // left: 30px;
             }
         }
     }
@@ -101,7 +91,12 @@
         background: $scale-background-color;
         border-radius: 3px;
         @include mobile{
+            position: relative;
             width: 85px;
+            height: 12px;
+            border-radius: 6px;
+            border: 1px solid $border-primary-color;
+            background: $scale-mobile-background-color;
         }
     }
     &__grip{
@@ -115,6 +110,23 @@
         box-shadow: $grip-shadow;
         border: 1px solid $border-primary-color;
         background: $page-main-color;
+        @include mobile{
+            margin-left: 3% !important;
+            transform: translate(0);
+            width: 35px;
+            height: 6px;
+            border-radius: 3px;
+            background-color: $grip-mobile-color;
+            transition: margin-left 1s ease-out;
+            &-mobile{
+                &--left{
+                    margin-left: 3% !important;
+                }
+                &--right{
+                    margin-left: 54% !important;
+                }
+            }    
+        }
         &::before{
             content: '';
             background: $button-main-color;
@@ -122,10 +134,23 @@
             height: 8px;
             border-radius: 50%;
             display: block;
+            @include mobile{
+                content: none;
+            }
         }
         &:hover{
             cursor: pointer;
             box-shadow: $grip-hover-shadow;
+        }
+    }
+    &__mobile{
+        @include mobile{
+            position: absolute;
+            top: -10px;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            cursor: pointer;    
         }
     }
     &__text{
@@ -134,13 +159,8 @@
         padding-bottom: 5px;
         font-size: 20px;
         @include mobile{
+            border-bottom: none;
             font-size: 16px;
-        }
-        &:first-child{
-            margin-right: 25px;
-        }
-        &:last-child{
-            margin-left: 25px;
         }
     }
 }

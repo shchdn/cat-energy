@@ -9,6 +9,9 @@
         @include tablet{
             flex-direction: column;
         }
+        @include mobile{
+            background: $page-secondary-color;
+        }
     }
     &__title{
         padding: 65px 0;

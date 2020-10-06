@@ -84,6 +84,7 @@
             font-family: $arial;
             @include mobile{
                 font-size: 14px;
+                margin-left: 20px;
             }
         }
     }
