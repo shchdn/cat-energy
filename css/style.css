@@ -349,10 +349,13 @@ body {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
-  height: 1px;
   width: 1px;
-  z-index: -1000; }
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0); }
 
 .title-line {
   display: -webkit-inline-box;
@@ -1616,7 +1619,9 @@ body {
 .slider__photo {
   width: 690px;
   height: 517px;
-  margin-top: -180px; }
+  margin-top: -180px;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out; }
   @media (max-width: 1299px) {
     .slider__photo {
       max-width: 677px; } }
@@ -1670,7 +1675,12 @@ body {
   border-radius: 3px; }
   @media (max-width: 767px) {
     .slider__scale {
-      width: 85px; } }
+      position: relative;
+      width: 85px;
+      height: 12px;
+      border-radius: 6px;
+      border: 1px solid #cdcdcd;
+      background: #ffffff; } }
 
 .slider__grip {
   -webkit-transform: translate(-50%);
@@ -1688,6 +1698,21 @@ body {
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   border: 1px solid #cdcdcd;
   background: #ffffff; }
+  .slider__grip-mobile--left {
+    margin-left: 3% !important; }
+  .slider__grip-mobile--right {
+    margin-left: 54% !important; }
+  @media (max-width: 767px) {
+    .slider__grip {
+      margin-left: 3%;
+      -webkit-transform: translate(0);
+              transform: translate(0);
+      width: 35px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: #68b738;
+      -webkit-transition: margin-left 1s ease-out;
+      transition: margin-left 1s ease-out; } }
   .slider__grip::before {
     content: '';
     background: #68b738;
@@ -1695,15 +1720,31 @@ body {
     height: 8px;
     border-radius: 50%;
     display: block; }
+    @media (max-width: 767px) {
+      .slider__grip::before {
+        content: none; } }
   .slider__grip:hover {
     cursor: pointer;
     -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25); }
 
+@media (max-width: 767px) {
+  .slider__mobile {
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    cursor: pointer; } }
+
 .slider__text {
   text-transform: uppercase;
   border-bottom: 1px dotted rgba(17, 17, 17, 0.25);
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  font-size: 20px; }
+  @media (max-width: 767px) {
+    .slider__text {
+      font-size: 16px; } }
   .slider__text:first-child {
     margin-right: 25px; }
   .slider__text:last-child {
