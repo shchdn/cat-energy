@@ -6,6 +6,7 @@
 node_modules/
 npm-debug.*
 source/css/*.css
+source/img/min
 build/
 Thumbs.db
 .publish/
